@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects · Luca Valentini</title>
+  <meta name="description" content="Games and software Luca Valentini has shipped: KYKUYO, Waxy: The Wick and the Witch, and Brain App." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo">LV<span class="accent">.</span></a>
+    <nav class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav__cta">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <section class="pagehero">
+    <div class="pagehero__glow"></div>
+    <div class="wrap">
+      <p class="pagehero__eyebrow">Projects</p>
+      <h1 class="pagehero__title">Things I've shipped</h1>
+      <p class="pagehero__desc">Two shipped games and a personal engineering project. For the deep technical breakdowns, see the <a href="work.html" class="accent">Work</a> page.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <div class="projlist">
+
+          <!-- SOLAR -->
+          <article class="projcard" id="solar">
+            <div class="projcard__body">
+              <div class="projcard__top">
+                <h3>SOLAR</h3>
+                <div class="projcard__tags"><span>Mobile</span><span>Live</span><span>Senior</span></div>
+              </div>
+              <p class="projcard__role">Senior Unity Developer · KYKUYO</p>
+              <p class="projcard__desc">Live geolocation/AR mobile game published on Google Play and the App Store, built by a team of around 15. I own the character dressing system, the camera-context architecture, the NPC GPU-rendering pipeline, the onboarding flow, the in-app purchase store and the HUD, plus a set of internal editor tools. It's the project most of the case studies on the Work page come from.</p>
+              <div class="projcard__stack">Unity · C# · Addressables · UI Toolkit · GPU Skinning · Jobs System · Burst</div>
+              <a class="projcard__link" href="https://play.google.com/store/apps/details?id=com.kykuyo.solar" target="_blank" rel="noopener">View on Google Play →</a>
+            </div>
+            <div class="projcard__media">
+              <figure class="media"><a class="ytlink" href="https://www.youtube.com/watch?v=amg94xwi4qA" target="_blank" rel="noopener" aria-label="Watch the SOLAR trailer on YouTube"><img src="assets/projects/solar-yt.jpg" alt="SOLAR gameplay trailer" loading="lazy" /><span class="ytlink__badge">Watch on YouTube</span></a><figcaption>Official gameplay trailer</figcaption></figure>
+              <figure class="media"><div class="media__frame" data-label="SOLAR screenshot" data-file="assets/projects/solar-1.png"><img src="assets/projects/solar-1.png" alt="SOLAR gameplay screenshot" loading="lazy" /></div></figure>
+            </div>
+          </article>
+
+          <!-- SPCA × SOLAR -->
+          <article class="projcard" id="spca">
+            <div class="projcard__body">
+              <div class="projcard__top">
+                <h3>SPCA × SOLAR</h3>
+                <div class="projcard__tags"><span>Mobile</span><span>Campaign</span><span>Project Lead</span></div>
+              </div>
+              <p class="projcard__role">Technical direction · lead programmer · KYKUYO</p>
+              <p class="projcard__desc">A time-limited cat-rescue game built as a campaign collaboration between SOLAR and SPCA (animal rescue, Singapore). This one was handed to me to own end-to-end: I took the technical direction and delivered it inside a fixed campaign window. I built the Addressable landscape manager, map player movement, the radar system, local data-driven quests, the adoption UI, and a full mock layer so the game could be developed without waiting on the backend. No longer available now that the campaign has ended.</p>
+              <div class="projcard__stack">Unity · C# · Mobile · Addressables · ScriptableObjects · Jun–Nov 2025</div>
+              <span class="projcard__link projcard__link--muted">Offline — temporary campaign, ended Dec 2025</span>
+            </div>
+            <div class="projcard__media">
+              <figure class="media"><div class="media__frame" data-label="SPCA × SOLAR — cat-rescue game" data-file="assets/projects/spca-cover.png"><img src="assets/projects/spca-cover.png" alt="SPCA × SOLAR cat-rescue campaign game" loading="lazy" /></div><figcaption>The campaign cat-rescue game</figcaption></figure>
+            </div>
+          </article>
+
+          <!-- WAXY -->
+          <article class="projcard" id="waxy">
+            <div class="projcard__body">
+              <div class="projcard__top">
+                <h3>Waxy: The Wick and the Witch</h3>
+                <div class="projcard__tags"><span>PC</span><span>Indie</span><span>Award</span></div>
+              </div>
+              <p class="projcard__role">Lead Unity Developer · 3AM Games Studio</p>
+              <p class="projcard__desc">3D puzzle-platformer that won the ADVA MVP mentorship program and was rebuilt from the ground up into a market-ready title. I led programming and technical direction over 26 months in an 8-person team: the core wax and fire-state mechanics, the camera system, the modular architecture, and most of its custom editor tooling. Presented at industry expos across Argentina.</p>
+              <div class="projcard__stack">Unity · C# · Custom Editor Tools · Cinemachine</div>
+              <a class="projcard__link" href="https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch" target="_blank" rel="noopener">Play on itch.io →</a>
+            </div>
+            <div class="projcard__media">
+              <figure class="media"><a class="ytlink" href="https://www.youtube.com/watch?v=Ym1u3FD-qyw" target="_blank" rel="noopener" aria-label="Watch the Waxy trailer on YouTube"><img src="assets/projects/waxy-yt.jpg" alt="Waxy: The Wick and the Witch official trailer" loading="lazy" /><span class="ytlink__badge">Watch on YouTube</span></a><figcaption>Official trailer</figcaption></figure>
+              <figure class="media"><div class="media__frame" data-label="Waxy screenshot" data-file="assets/projects/waxy-1.png"><img src="assets/projects/waxy-1.png" alt="Waxy gameplay screenshot" loading="lazy" /></div></figure>
+            </div>
+          </article>
+
+          <!-- UNITY TOOLS -->
+          <article class="projcard" id="unity-tools">
+            <div class="projcard__body">
+              <div class="projcard__top">
+                <h3>Unity Tools</h3>
+                <div class="projcard__tags"><span>Open Source</span><span>Editor Tooling</span><span>Personal</span></div>
+              </div>
+              <p class="projcard__role">Sole author · published packages</p>
+              <p class="projcard__desc"><strong>Five Unity editor tools published as UPM packages</strong>, installable straight from a Git URL — each with its own assembly definition and documentation: Asset Renamer (bulk renaming driven by an exportable rule set, so a team shares one naming convention), PlayerPrefs Manager, Prefab Replacer, Project Zipper and Rename Items. <strong>The Asset Renamer is installed and in use in SOLAR</strong>, a shipped commercial game.</p>
+              <div class="projcard__stack">Unity · C# · UPM Packaging · Editor Windows</div>
+              <a class="projcard__link" href="https://github.com/LucaValentini25/Unity-Tools" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+            <div class="projcard__media">
+              <figure class="media"><div class="media__frame" data-label="Asset Renamer settings" data-file="assets/projects/unity-tools.png"><img src="assets/projects/unity-tools.png" alt="Asset Renamer tool settings window" loading="lazy" /></div><figcaption>Shared naming rules as an exportable asset</figcaption></figure>
+            </div>
+          </article>
+
+          <!-- BRAIN APP -->
+          <article class="projcard" id="brainapp">
+            <div class="projcard__body">
+              <div class="projcard__top">
+                <h3>Brain App</h3>
+                <div class="projcard__tags"><span>AI</span><span>Python</span><span>Personal</span></div>
+              </div>
+              <p class="projcard__role">Solo Developer · Personal project</p>
+              <p class="projcard__desc">Local-first AI assistant with a <strong>test suite of 323 cases that runs green in 77 seconds</strong> and 17 documented architecture decisions. Layered architecture with a pure domain layer that has zero upward dependencies and zero SQL outside repositories. Core principle: <strong>the LLM never decides an action</strong> — it classifies intent and extracts structured data with constrained decoding, while deterministic code executes every action, so the product keeps working when the model is unavailable. Runs end to end with no cloud; cloud models are optional and swappable at runtime across four interchangeable backends. The code stays private.</p>
+              <div class="projcard__stack">Python · FastAPI · SQLite · Vue 3 · Local LLMs (Ollama)</div>
+              <span class="projcard__link projcard__link--muted">Private repo — architecture available on request</span>
+            </div>
+            <div class="projcard__media">
+              <figure class="media"><div class="media__frame media__frame--video" data-label="Brain App walkthrough" data-file="assets/projects/brainapp-demo.mp4"><video src="assets/projects/brainapp-demo.mp4" poster="assets/projects/brainapp-demo.png" controls preload="metadata"></video></div><figcaption>Walkthrough — reminders, calendar, expenses, notes and habits, all driven in plain language</figcaption></figure>
+              <figure class="media"><div class="media__frame" data-label="Metrics dashboard" data-file="assets/projects/brainapp-metrics.png"><img src="assets/projects/brainapp-metrics.png" alt="Brain App metrics dashboard with monthly balance and category breakdown" loading="lazy" /></div><figcaption>Metrics — including per-provider LLM token usage and estimated cost</figcaption></figure>
+              <figure class="media"><div class="media__frame" data-label="Architecture diagram" data-file="assets/projects/brainapp-architecture.png"><img src="assets/projects/brainapp-architecture.png" alt="Brain App layered architecture diagram" loading="lazy" /></div><figcaption>Layered architecture — the LLM only classifies intent</figcaption></figure>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="cta__title">Curious how these were built?</h2>
+        <p class="cta__lead">The Work page breaks down the tooling and performance decisions behind them.</p>
+        <a href="work.html" class="btn btn--primary">See the case studies</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© <span id="year"></span> Luca Valentini</span>
+    <span>Built from a single source of truth · Buenos Aires</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

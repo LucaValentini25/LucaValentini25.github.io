@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luca Valentini — Senior Unity Developer</title>
+  <meta name="description" content="Senior Unity Developer (6+ yrs) specialized in complex gameplay systems, custom editor tooling, and mobile performance optimization." />
+  <meta property="og:title" content="Luca Valentini — Senior Unity Developer" />
+  <meta property="og:description" content="Gameplay systems, custom editor tooling, and mobile performance optimization. 6+ years shipping games on mobile and PC." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo">LV<span class="accent">.</span></a>
+    <nav class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav__cta">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__glow"></div>
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <!-- Foto de perfil: dejar el archivo en assets/me.jpg (cuadrada, mínimo 400×400).
+             Si el archivo no existe, main.js oculta el avatar y el hero queda como antes. -->
+        <img class="hero__avatar" src="assets/me.jpg" alt="Luca Valentini" width="112" height="112" />
+        <p class="hero__eyebrow">Senior Unity Developer · Systems &amp; Tools Programmer</p>
+        <h1 class="hero__title">Luca<br />Valentini</h1>
+        <p class="hero__sub">Game Systems · Editor Tooling · Automation · Performance</p>
+        <p class="hero__lead">
+          I build structured game systems and the custom tooling that automates and
+          speeds up the whole team's work — backed by real performance optimization.
+        </p>
+        <div class="hero__actions">
+          <a href="work.html" class="btn btn--primary">See how I solve problems</a>
+          <a href="contact.html" class="btn btn--ghost">Get in touch</a>
+        </div>
+        <div class="hero__meta">
+          <span>📍 Buenos Aires, Argentina</span>
+          <span>🌎 Remote · worldwide</span>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hcard hcard--1"><div class="hcard__k">~95%</div><div class="hcard__l">faster frames on a full NPC crowd, moved entirely onto the GPU</div></div>
+        <div class="hcard hcard--2"><div class="hcard__k">6+</div><div class="hcard__l">years shipping Unity games across mobile and PC</div></div>
+        <div class="hcard hcard--3"><div class="hcard__k">3</div><div class="hcard__l">games shipped — Google Play, App Store &amp; itch.io</div></div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- WHAT I DO -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__num">01</span>
+          <h2 class="section__title">What I do</h2>
+          <p class="section__desc">Three things I'm consistently the person for on a team.</p>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar__icon">🛠️</div>
+            <h3>Tooling &amp; Automation</h3>
+            <p>Custom editor windows and automation that turn slow, repetitive work into fast validated workflows — inside Unity and outside it. My differentiator.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">🧩</div>
+            <h3>Game Systems</h3>
+            <p>Structured, self-contained systems (inventory, equipment, data-driven content) with a modular architecture that's easy to extend and iterate on.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">⚡</div>
+            <h3>Performance</h3>
+            <p>Real profiling-driven optimization: Jobs System, Burst, memory and render tuning to run on the hardware players actually own.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED WORK -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__num">02</span>
+          <h2 class="section__title">Selected work</h2>
+          <p class="section__desc">Real problems from shipped games — the approach, the tools, and what I actually built.</p>
+        </div>
+        <div class="projgrid">
+          <article class="projmini">
+            <figure class="media"><div class="media__frame" data-label="SOLAR — NPC GPU rendering" data-file="assets/work/npc-after.png"><img src="assets/work/npc-after.png" alt="NPC crowd rendered on the GPU at 215 FPS" loading="lazy" /></div></figure>
+            <div class="projmini__body">
+              <h3>An NPC crowd, ~95% faster on the GPU</h3>
+              <p class="projmini__role">SOLAR · Performance</p>
+              <p>Moving a thousand NPCs off the Animator and onto GPU skinning — same scene, same look, a fraction of the frame budget.</p>
+              <a class="projmini__link" href="work.html#npc-gpu">Read the case study →</a>
+            </div>
+          </article>
+          <article class="projmini">
+            <figure class="media"><div class="media__frame" data-label="SOLAR — dressing system" data-file="assets/work/dressing-ingame.png"><img src="assets/work/dressing-ingame.png" alt="The dressing system in game: browsing and previewing garments" loading="lazy" /></div></figure>
+            <div class="projmini__body">
+              <h3>A character dressing system</h3>
+              <p class="projmini__role">SOLAR · Game Systems</p>
+              <p>A node-graph garment system with backend sync, its own authoring tools, and the same data driving the player and the NPC crowd.</p>
+              <a class="projmini__link" href="work.html#dressing-system">Read the case study →</a>
+            </div>
+          </article>
+          <article class="projmini">
+            <div class="projmini__body">
+              <h3>Internal tooling for the team</h3>
+              <p class="projmini__role">SOLAR · Automation</p>
+              <p>Editor tools that turn error-prone setup — Addressables, API client, builds — into one-click, validated actions.</p>
+              <a class="projmini__link" href="work.html#kykuyo-tooling">Read the case study →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="cta__title">Building a game that needs a solid technical core?</h2>
+        <p class="cta__lead">I'm open to Senior Unity Developer roles — remote, worldwide.</p>
+        <a href="contact.html" class="btn btn--primary">Let's talk</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© <span id="year"></span> Luca Valentini</span>
+    <span>Built from a single source of truth · Buenos Aires</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
