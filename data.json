@@ -41,7 +41,7 @@
     "image": "https://lucavalentini25.github.io/assets/me.jpg",
     "email": "lucavalentini25@gmail.com",
     "url": "https://lucavalentini25.github.io",
-    "summary": "Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build structured, self-contained game systems and the custom editor tooling that makes the whole team faster, backed by measured performance work on mobile.",
+    "summary": "Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build the parts of a game other people build on: systems that hold up as content grows, and editor tools that turn hours of manual work into one click, with performance measured on the phones players own.",
     "availability": "Available now for Senior Unity Developer roles, remote, worldwide. Contractor from Argentina is fine.",
     "location": {
       "city": "Buenos Aires",
@@ -268,7 +268,7 @@
       "type": "VideoGame",
       "description": "Roguelike dice builder where your deck is a bag of dice and combat is based on Generala. In development.",
       "role": "Mobile port and gamepad support, in collaboration with members of 3AM Games",
-      "result": "Ported the game to mobile and added controller support; still contributing while it's in development.",
+      "result": "Ported the game to mobile (touch controls, safe-area layouts, inputs reworked into gestures or on-screen buttons) and added controller support; still contributing while it's in development.",
       "platforms": [
         "Web",
         "Mobile (in progress)"
@@ -276,8 +276,9 @@
       "keywords": [
         "Unity",
         "Mobile port",
-        "Input System",
-        "Gamepad"
+        "Touch controls",
+        "Safe area",
+        "Controller support"
       ],
       "url": "https://3amgamesstudio.itch.io/rollgeon",
       "video": "https://www.youtube.com/watch?v=tV2u1QosCds"
@@ -413,7 +414,7 @@
       "id": "rollgeon-port",
       "title": "Taking a browser roguelike to phones and controllers",
       "project": "Rollgeon",
-      "summary": "Mobile port and controller support for a roguelike dice builder still in development."
+      "summary": "Mobile port and controller support for a roguelike dice builder: touch controls, safe-area layouts and inputs reworked into gestures or on-screen buttons."
     },
     {
       "id": "kykuyo-tooling",

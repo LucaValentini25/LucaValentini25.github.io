@@ -50,11 +50,10 @@
         <div class="tb">contact</div>
         <div class="win__body contact__grid">
           <div>
-            <span class="eyebrow">Contact</span>
             <h1 class="pagehero__title">Let's talk.</h1>
             <p class="pagehero__lead">I'm available now for Senior Unity Developer roles, remote, worldwide. Send a proposal with the form below, or email me directly.</p>
             <!-- REVISAR: email público de contacto -->
-            <a class="contact__mail" href="mailto:lucavalentini25@gmail.com">lucavalentini25@gmail.com</a>
+            <div class="contact__mailrow"><a class="contact__mail" href="mailto:lucavalentini25@gmail.com">lucavalentini25@gmail.com</a><button type="button" class="copy" data-copy="lucavalentini25@gmail.com" hidden>Copy email</button></div>
           </div>
           <div class="contact__list">
             <a href="mailto:lucavalentini25@gmail.com"><span>Email</span><span>lucavalentini25@gmail.com →</span></a>
@@ -72,7 +71,7 @@
       <div class="win">
         <div class="tb">new-proposal.txt</div>
         <div class="win__body">
-          <header class="sec-head"><span class="eyebrow">Proposal</span><h2 id="form-title">Send me a proposal</h2><p>A role, a contract or a collaboration.</p></header>
+          <header class="sec-head"><h2 id="form-title">Send me a proposal</h2><p>A role, a contract or a collaboration.</p></header>
           <!-- Formulario sin backend propio: lo entrega Web3Forms (https://web3forms.com) a mi casilla.
                Sin JS se envía igual (POST normal y Web3Forms muestra su página de confirmación).
                Con JS, main.js lo envía por fetch y muestra los estados en #form-status. -->
@@ -121,7 +120,7 @@
               <p class="sr-only" id="f-message-hint">At least 20 characters.</p>
             </div>
             <div class="form__foot">
-              <button class="btn btn--primary" type="submit">Send proposal</button>
+              <button class="btn btn--primary" type="submit"><span class="btn__label">Send proposal</span></button>
               <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
             </div>
             <p class="form__privacy">I use these details only to reply to your message. They're delivered to my inbox through Web3Forms and aren't added to any list. <a href="privacy.html">Privacy policy</a>.</p>

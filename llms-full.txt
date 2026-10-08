@@ -2,7 +2,7 @@
 
 > Senior Unity Developer and Software Developer, systems & tools.
 
-Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build structured, self-contained game systems and the custom editor tooling that makes the whole team faster, backed by measured performance work on mobile.
+Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build the parts of a game other people build on: systems that hold up as content grows, and editor tools that turn hours of manual work into one click, with performance measured on the phones players own.
 
 - **Availability:** Available now for Senior Unity Developer roles, remote, worldwide. Contractor from Argentina is fine.
 - **Location:** Buenos Aires, Argentina (remote)
@@ -91,8 +91,8 @@ Live free-to-play geolocation/AR mobile game.
 Roguelike dice builder where your deck is a bag of dice and combat is based on Generala. In development.
 
 - **Role:** Mobile port and gamepad support, in collaboration with members of 3AM Games
-- **Result:** Ported the game to mobile and added controller support; still contributing while it's in development.
-- **Stack:** Unity, Mobile port, Input System, Gamepad
+- **Result:** Ported the game to mobile (touch controls, safe-area layouts, inputs reworked into gestures or on-screen buttons) and added controller support; still contributing while it's in development.
+- **Stack:** Unity, Mobile port, Touch controls, Safe area, Controller support
 - **Link:** https://3amgamesstudio.itch.io/rollgeon
 - **Trailer:** https://www.youtube.com/watch?v=tV2u1QosCds
 
@@ -148,7 +148,7 @@ Local-first AI assistant where the LLM never decides an action: it classifies in
 - [A dressing system that survives every content drop](https://lucavalentini25.github.io/work.html#dressing) (SOLAR): Garments as data in a node graph, an in-game coin shop backed by the API, 8 purpose-built authoring tools, and the same data feeding the player and the NPC crowd.
 - [Filling a mobile city with NPCs without killing the frame](https://lucavalentini25.github.io/work.html#npc-gpu) (SOLAR): GPU skinning with a custom Vertex Texture Animation (VAT) baker and draws grouped by mesh, replacing one Animator per character and a draw call per garment piece: 10 to 200 fps measured on device.
 - [Making a multiplayer platformer the server can trust](https://lucavalentini25.github.io/work.html#snackdown) (Snackdown): Server-authoritative rebuild with client-side prediction and server reconciliation written by hand, on a 30 Hz tick.
-- [Taking a browser roguelike to phones and controllers](https://lucavalentini25.github.io/work.html#rollgeon-port) (Rollgeon): Mobile port and controller support for a roguelike dice builder still in development.
+- [Taking a browser roguelike to phones and controllers](https://lucavalentini25.github.io/work.html#rollgeon-port) (Rollgeon): Mobile port and controller support for a roguelike dice builder: touch controls, safe-area layouts and inputs reworked into gestures or on-screen buttons.
 - [Internal tooling for the work nobody should do by hand](https://lucavalentini25.github.io/work.html#kykuyo-tooling) (SOLAR): Named editor utilities the whole team uses: Addressables Folder Manager, a build-and-API suite and a Mesh Instance Baker. 9 of the project's 35 editor tools.
 - [When everything wants to control the camera](https://lucavalentini25.github.io/work.html#camera) (SOLAR): Single-authority camera state arbitrated once per frame, in an assembly that deliberately doesn't reference Cinemachine, so bypassing it is a compile error.
 - [The repetitive work that was eating level production](https://lucavalentini25.github.io/work.html#waxy-tools) (Waxy): 10 of the project's 14 custom editor tools, including batch blockout-to-prefab conversion and localization key assignment across Timelines.

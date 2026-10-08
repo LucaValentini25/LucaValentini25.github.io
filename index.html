@@ -46,7 +46,7 @@
       "@id": "https://lucavalentini25.github.io/#person",
       "name": "Luca Valentini",
       "jobTitle": "Senior Unity Developer",
-      "description": "Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build structured, self-contained game systems and the custom editor tooling that makes the whole team faster, backed by measured performance work on mobile.",
+      "description": "Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build the parts of a game other people build on: systems that hold up as content grows, and editor tools that turn hours of manual work into one click, with performance measured on the phones players own.",
       "url": "https://lucavalentini25.github.io",
       "image": "https://lucavalentini25.github.io/assets/me.jpg",
       "email": "mailto:lucavalentini25@gmail.com",
@@ -150,7 +150,7 @@
       "creator": {
         "@id": "https://lucavalentini25.github.io/#person"
       },
-      "keywords": "Unity, Mobile port, Input System, Gamepad",
+      "keywords": "Unity, Mobile port, Touch controls, Safe area, Controller support",
       "url": "https://3amgamesstudio.itch.io/rollgeon",
       "gamePlatform": [
         "Web",
@@ -265,9 +265,9 @@
         <div class="win__body hero__copy">
           <div class="hero__me"><img src="assets/me.jpg" alt="Luca Valentini" width="120" height="120"><div><b>Hi, I'm Luca.</b><span class="roles"><span class="role-pill role-pill--main">Senior Unity Developer</span><span class="role-pill">Software Developer</span></span></div></div>
           <h1 class="hero__title">I build the systems a game runs on, and the tools that make the whole team faster.</h1>
-          <p class="hero__lead">Senior Unity Developer in studio teams since 2023. Until September 2026 I was on SOLAR, a live free-to-play mobile game, where I owned the character dressing system. I also lead the technical direction of Waxy, a 3D puzzle-platformer.</p>
-          <div class="actions"><a class="btn btn--primary" href="work.html">See how I solve problems</a><a class="btn btn--secondary" href="contact.html">Get in touch</a></div>
-          <ul class="hero__meta"><li>Buenos Aires, Argentina</li><li>Remote, worldwide</li><li class="status">Available now</li></ul>
+          <p class="hero__lead">I'm a Unity developer who likes building the parts of a game other people build on: systems that hold up as content grows, and editor tools that turn hours of manual work into one click. I care that it runs well on the phones players actually own.</p>
+          <div class="actions"><a class="btn btn--secondary" href="work.html">See how I solve problems <span class="arr" aria-hidden="true">→</span></a><a class="link" href="contact.html">Get in touch</a></div>
+          <ul class="hero__meta"><li class="status"><span aria-hidden="true"></span>Available now</li><li>Buenos Aires, Argentina</li><li>Remote, worldwide</li></ul>
         </div>
       </div>
     </div>
@@ -278,7 +278,7 @@
       <div class="win">
         <div class="tb">what-i-do.md</div>
         <div class="win__body">
-          <header class="sec-head"><span class="eyebrow">What I do</span><h2>Three things I'm consistently the person for on a team.</h2></header>
+          <header class="sec-head"><h2>Three things I'm consistently the person for on a team.</h2></header>
           <div class="grid3 pillars">
             <article class="pillar"><span class="pillar__n">Tooling &amp; automation</span><h3>Make slow &amp; repetitive work disappear</h3><p>Custom editor windows and automation that turn error-prone setup into fast, validated workflows, inside Unity and outside it.</p></article>
             <article class="pillar"><span class="pillar__n">Game systems</span><h3>Structured &amp; self-contained systems</h3><p>Inventory, equipment, data-driven content: modular architecture that's easy to extend, and that the rest of the team can work on safely.</p></article>
@@ -294,13 +294,13 @@
       <div class="win">
         <div class="tb">work/</div>
         <div class="win__body">
-          <header class="sec-head"><span class="eyebrow">Selected work</span><h2>Real problems from shipped games.</h2><p>The approach, the tools, and what I actually built.</p></header>
+          <header class="sec-head"><h2>Real problems from shipped games.</h2><p>The approach, the tools, and what I actually built.</p></header>
           <div class="grid3">
             <a class="card" href="work.html#dressing"><div class="card__media"><img src="assets/work/dressing-ingame.png" alt="The dressing system in game" loading="lazy"></div><div class="card__body"><span class="tag">SOLAR · Game systems</span><h3>A character dressing system</h3><p>Node-graph garments, an in-game coin shop backed by the API, and 8 authoring tools. The same data dresses the player and the crowd.</p><span class="metric">Owned end-to-end</span></div></a>
             <a class="card" href="work.html#npc-gpu"><div class="card__media"><img src="assets/work/npc-after.png" alt="NPC crowd rendered on the GPU" loading="lazy"></div><div class="card__body"><span class="tag">SOLAR · Performance</span><h3>A full NPC crowd on mid-range Android</h3><p>GPU skinning with a custom Vertex Texture Animation (VAT) baker, draws grouped by mesh.</p><span class="metric">10 → 200 fps</span></div></a>
-            <a class="card" href="work.html#rollgeon-port"><div class="card__media"><img src="assets/projects/rollgeon-yt.jpg" alt="Rollgeon" loading="lazy"></div><div class="card__body"><span class="tag">Rollgeon · Mobile port</span><h3>Taking a browser roguelike to phones and controllers</h3><p>Ported Rollgeon to mobile and added full controller support, and I keep contributing as it grows.</p><span class="metric">Mobile + gamepad</span></div></a>
+            <a class="card" href="work.html#rollgeon-port"><div class="card__media"><img src="assets/projects/rollgeon-yt.jpg" alt="Rollgeon" loading="lazy"></div><div class="card__body"><span class="tag">Rollgeon · Mobile port</span><h3>Taking a browser roguelike to phones and controllers</h3><p>Touch controls, safe-area layouts and gesture-based input for phones, plus full controller support.</p><span class="metric">Mobile + gamepad</span></div></a>
           </div>
-          <div class="sec-foot"><a class="btn btn--secondary" href="work.html">All eight case studies →</a></div>
+          <div class="sec-foot"><a class="btn btn--secondary" href="work.html">All eight case studies <span class="arr" aria-hidden="true">→</span></a></div>
         </div>
       </div>
     </div>
@@ -311,7 +311,7 @@
       <div class="win">
         <div class="tb">projects/</div>
         <div class="win__body">
-          <header class="sec-head"><span class="eyebrow">Shipped &amp; built</span><h2>Games and tools I've worked on.</h2></header>
+          <header class="sec-head"><h2>Games and tools I've worked on.</h2></header>
           <div class="grid3">
             <a class="card card--compact" href="projects.html#solar"><div class="card__media"><img src="assets/projects/solar-1.png" alt="SOLAR" loading="lazy"></div><div class="card__body"><span class="tag">Mobile · Live</span><h3>SOLAR</h3><p>Live geolocation/AR game on Google Play &amp; the App Store.</p></div></a>
             <a class="card card--compact" href="projects.html#waxy"><div class="card__media"><img src="assets/projects/waxy-yt.jpg" alt="Waxy" loading="lazy"></div><div class="card__body"><span class="tag">PC · Indie · 3AM Games Studio</span><h3>Waxy: The Wick and the Witch</h3><p>3D puzzle-platformer, selected for the ADVA MPVP program.</p></div></a>

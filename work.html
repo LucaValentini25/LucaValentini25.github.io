@@ -49,7 +49,6 @@
       <div class="win">
         <div class="tb">work/README.md</div>
         <div class="win__body">
-          <span class="eyebrow">Case studies</span>
           <h1 class="pagehero__title">How I solve problems.</h1>
           <p class="pagehero__lead">Eight real problems from shipped games, open-source work and prototypes. Each one: the problem, the approach, how it works, and what I built.</p>
           <nav class="toc" aria-label="Case studies"><a href="#dressing">Dressing system</a><a href="#npc-gpu">NPC crowd on the GPU</a><a href="#snackdown">Multiplayer netcode</a><a href="#rollgeon-port">Mobile port</a><a href="#kykuyo-tooling">Internal tooling</a><a href="#camera">Camera contexts</a><a href="#waxy-tools">Level-building tools</a><a href="#external">External tooling</a></nav>
@@ -105,13 +104,9 @@
           </dl>
           <div class="case__full case__how"><h3>Also</h3><p><b>Connection approval</b> with a payload (nickname, character, version check), and the same join flow by <b>Relay code or LAN IP</b> behind one interface. <b>EditMode tests</b> cover the simulation, including replay determinism: 40 simulated ticks run twice give a bit-identical result. Built with Claude Code.</p></div>
           <ul class="chips case__full"><li>Netcode for GameObjects</li><li>Unity Transport</li><li>Relay / Lobby</li><li>Client-side prediction</li><li>Server reconciliation</li><li>Snapshot interpolation</li><li>EditMode tests</li></ul>
-          <a class="link case__full" href="https://github.com/LucaValentini25/Snackdown">See the repo on GitHub ↗</a>
+          <a class="link case__full" href="https://github.com/LucaValentini25/Snackdown">See the repo on GitHub <span class="arr arr--out" aria-hidden="true">↗</span></a>
         </div>
       </article>
-
-      <!-- REVISAR: el caso de Rollgeon está escrito solo con lo confirmado (port a mobile + soporte de mando,
-           sigue en desarrollo). Falta el "How it works": qué implicó el port (controles táctiles, UI para
-           pantallas chicas, rendimiento, plataformas Android/iOS, sistema de input). Completar con Luca. -->
       <article class="case win" id="rollgeon-port">
         <div class="tb">04-rollgeon-mobile-port.md</div>
         <div class="win__body case__grid">
@@ -122,11 +117,11 @@
           </figure>
           <dl class="case__steps">
             <div><dt>Problem</dt><dd>Rollgeon, a roguelike dice builder started by members of 3AM Games, was built to be played with keyboard and mouse in the browser. Many players, and many studios, want games like this on their phones.</dd></div>
-            <div><dt>Approach</dt><dd>Port it to mobile and add controller support, so the same game plays on a phone and with a gamepad.</dd></div>
-            <div><dt>Now</dt><dd>The game is still in development and I keep contributing to it.</dd></div>
+            <div><dt>Approach</dt><dd>Rework how the game is played rather than just recompiling it: every interaction has to make sense with a thumb on a phone, and with a gamepad.</dd></div>
+            <div><dt>How it works</dt><dd><b>Touch controls</b> replace mouse and keyboard, with inputs reworked into <b>gestures or on-screen buttons</b> depending on the action. The UI adapts to each phone's <b>safe area</b>, so nothing ends up under a notch or a rounded corner. <b>Controller support</b> covers the whole game. It's still in development, and I keep contributing to it.</dd></div>
           </dl>
-          <ul class="chips case__full"><li>Unity</li><li>Mobile port</li><li>Controller support</li></ul>
-          <a class="link case__full" href="https://3amgamesstudio.itch.io/rollgeon">Rollgeon on itch.io ↗</a>
+          <ul class="chips case__full"><li>Mobile port</li><li>Touch controls</li><li>Gestures</li><li>Safe area</li><li>Controller support</li></ul>
+          <a class="link case__full" href="https://3amgamesstudio.itch.io/rollgeon">Rollgeon on itch.io <span class="arr arr--out" aria-hidden="true">↗</span></a>
         </div>
       </article>
 

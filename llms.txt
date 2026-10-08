@@ -1,6 +1,6 @@
 # Luca Valentini
 
-> Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build structured, self-contained game systems and the custom editor tooling that makes the whole team faster, backed by measured performance work on mobile.
+> Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build the parts of a game other people build on: systems that hold up as content grows, and editor tools that turn hours of manual work into one click, with performance measured on the phones players own.
 
 Available now for Senior Unity Developer roles, remote, worldwide. Contractor from Argentina is fine. Based in Buenos Aires, Argentina. Contact: lucavalentini25@gmail.com. [LinkedIn](https://www.linkedin.com/in/lucavalentinidev) · [GitHub](https://github.com/LucaValentini25) · [Instagram](https://www.instagram.com/clastergamedev/).
 

@@ -76,8 +76,14 @@ if (filters) {
   const cards = [...document.querySelectorAll('.projects > [data-tags]')];
   const status = document.getElementById('filter-status');
   const tagsOf = (c) => c.dataset.tags.split(' ');
+  // Barra azul activa que se desliza hasta la pestaña elegida
+  const moveBar = (b) => {
+    filters.style.setProperty('--x', `${b.offsetLeft}px`);
+    filters.style.setProperty('--w', `${b.offsetWidth}px`);
+  };
   filters.querySelectorAll('button').forEach((b) => {
     const f = b.dataset.filter;
+    b.addEventListener('click', () => moveBar(b));
     b.querySelector('.count').textContent = f === 'all' ? cards.length : cards.filter((c) => tagsOf(c).includes(f)).length;
     b.addEventListener('click', () => {
       filters.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
@@ -91,13 +97,41 @@ if (filters) {
     });
   });
   filters.hidden = false;
+  const current = () => filters.querySelector('[aria-pressed="true"]');
+  moveBar(current());
+  requestAnimationFrame(() => filters.classList.add('is-ready'));
+  addEventListener('resize', () => moveBar(current()));
 }
+
+// ---- Copiar el mail (a muchos el mailto: no les abre nada)
+document.querySelectorAll('button.copy[data-copy]').forEach((b) => {
+  if (!navigator.clipboard) return; // sin API de portapapeles, el botón queda oculto
+  b.hidden = false;
+  const label = b.textContent;
+  b.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(b.dataset.copy);
+      b.textContent = 'Copied ✓';
+    } catch (_) {
+      b.textContent = 'Select and copy it';
+    }
+    setTimeout(() => { b.textContent = label; }, 1600);
+  });
+});
 
 // ---- Formulario de contacto (Web3Forms)
 const form = document.getElementById('contact-form');
 if (form) {
   const status = document.getElementById('form-status');
   const button = form.querySelector('button[type="submit"]');
+  const label = button.querySelector('.btn__label');
+  const idle = label ? label.textContent : '';
+  // El texto del botón acompaña al estado (el aviso completo va en #form-status para lectores de pantalla)
+  const setLabel = (text) => {
+    if (!label) return;
+    label.textContent = text;
+    label.classList.remove('swap'); void label.offsetWidth; label.classList.add('swap');
+  };
   const MESSAGES = {
     valueMissing: 'This field is required.',
     typeMismatch: 'Enter a valid email address.',
@@ -147,6 +181,7 @@ if (form) {
     }
 
     button.disabled = true;
+    setLabel('Sending…');
     setStatus('sending', 'Sending…');
     try {
       const res = await fetch(form.action, {
@@ -158,8 +193,11 @@ if (form) {
       if (!res.ok || data.success === false) throw new Error(data.message || `HTTP ${res.status}`);
       form.reset();
       fields.forEach((el) => el.removeAttribute('aria-invalid'));
+      setLabel('Sent ✓');
+      setTimeout(() => setLabel(idle), 3000);
       setStatus('success', "Thanks, your message is on its way. I'll reply by email.");
     } catch (err) {
+      setLabel(idle);
       setStatus('error', 'It didn’t send. Please try again, or email lucavalentini25@gmail.com.');
     } finally {
       button.disabled = false;

@@ -49,7 +49,6 @@
       <div class="win">
         <div class="tb">projects/README.md</div>
         <div class="win__body">
-          <span class="eyebrow">Projects</span>
           <h1 class="pagehero__title">Games and tools I've shipped or built.</h1>
           <p class="pagehero__lead">Live mobile, indie PC, multiplayer netcode, a mobile port, a game jam, open-source editor tooling, and tools outside Unity.</p>
           <!-- Filtros: sin JS no se muestran y se ven todos los proyectos. main.js los activa. -->
@@ -77,17 +76,16 @@
             <a class="yt" href="https://www.youtube.com/watch?v=amg94xwi4qA" data-yt="amg94xwi4qA" data-title="SOLAR gameplay trailer" aria-label="Play video: SOLAR gameplay trailer (loads YouTube)"><img src="assets/projects/solar-yt.jpg" alt="" width="1280" height="720" loading="lazy"><span class="yt__play" aria-hidden="true">&#9654; Play trailer</span></a>
           </div>
           <div class="card__body">
-            <span class="tag">Mobile · Live · Free-to-play · KYKUYO</span>
             <h3>SOLAR</h3>
-            <p class="role">Senior Unity Developer · 2025 to 2026</p>
+            <p class="role">Senior Unity Developer · 2025 to 2026 · Mobile · Live · Free-to-play · KYKUYO</p>
             <p>Live geolocation/AR game on <strong>Google Play</strong> and the <strong>App Store</strong>. I owned the <strong>dressing system</strong>, the <strong>camera-context architecture</strong> and the <strong>NPC GPU rendering</strong> pipeline.</p>
             <ul class="facts">
               <li>Shipped the onboarding flow and the <strong>IAP store</strong>, with prices and inventory driven from the server.</li>
               <li>Built a typed <strong>API client</strong> generated from the backend's OpenAPI spec.</li>
               <li>Added <strong>GPU instancing</strong> for repeated vegetation and environment meshes.</li>
             </ul>
-            <ul class="chips"><li>Unity</li><li>C#</li><li>URP</li><li>Addressables</li><li>UI Toolkit</li><li>Jobs System</li><li>Burst</li></ul>
-            <div class="links"><a class="link" href="https://play.google.com/store/apps/details?id=com.kykuyo.solar">Google Play ↗</a><a class="link" href="work.html#dressing">Case studies →</a></div>
+            <ul class="chips"><li>Unity</li><li>C#</li><li>URP</li><li>Addressables</li></ul>
+            <div class="links"><a class="link" href="work.html#dressing">Case studies <span class="arr" aria-hidden="true">→</span></a><a class="link" href="https://play.google.com/store/apps/details?id=com.kykuyo.solar">Google Play <span class="arr arr--out" aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -95,9 +93,8 @@
           <div class="tb">snackdown.unity</div>
           <div class="card__media card__media--empty card__media--stat"><span><b>30 Hz</b>server-authoritative tick · up to 4 players</span></div>
           <div class="card__body">
-            <span class="tag">Multiplayer · Netcode · Open source</span>
             <h3>Snackdown</h3>
-            <p class="role">Solo developer · built with Claude Code</p>
+            <p class="role">Solo developer · built with Claude Code · Multiplayer · Netcode · Open source</p>
             <p>A 2D last-player-standing platformer, rebuilt from scratch so the <strong>server</strong> is the authority.</p>
             <ul class="facts">
               <li><strong>Client-side prediction</strong> and <strong>server reconciliation</strong> written by hand: Netcode for GameObjects doesn't include them.</li>
@@ -105,7 +102,7 @@
               <li>Join by <strong>Unity Relay</strong> code or LAN IP, with connection approval.</li>
             </ul>
             <ul class="chips"><li>Netcode for GameObjects</li><li>Relay / Lobby</li><li>Unity 6</li><li>EditMode tests</li></ul>
-            <div class="links"><a class="link" href="work.html#snackdown">Case study →</a><a class="link" href="https://github.com/LucaValentini25/Snackdown">GitHub ↗</a></div>
+            <div class="links"><a class="link" href="work.html#snackdown">Case study <span class="arr" aria-hidden="true">→</span></a><a class="link" href="https://github.com/LucaValentini25/Snackdown">GitHub <span class="arr arr--out" aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -115,17 +112,16 @@
             <a class="yt" href="https://www.youtube.com/watch?v=tV2u1QosCds" data-yt="tV2u1QosCds" data-title="Rollgeon reveal trailer" aria-label="Play video: Rollgeon reveal trailer (loads YouTube)"><img src="assets/projects/rollgeon-yt.jpg" alt="" width="1280" height="720" loading="lazy"><span class="yt__play" aria-hidden="true">&#9654; Play trailer</span></a>
           </div>
           <div class="card__body">
-            <span class="tag">Mobile · Roguelike · In development</span>
             <h3>Rollgeon</h3>
-            <p class="role">Mobile port &amp; controller support · with 3AM Games</p>
+            <p class="role">Mobile port &amp; controller support · with 3AM Games · Mobile · Roguelike · In development</p>
             <p>A roguelike dice builder where your deck is a bag of dice and combat is based on Generala.</p>
             <ul class="facts">
-              <li>Ported the game to <strong>mobile</strong>.</li>
+              <li>Ported it to <strong>mobile</strong>: <strong>touch controls</strong>, <strong>safe-area</strong> layouts, and inputs reworked into <strong>gestures</strong> or on-screen buttons.</li>
               <li>Added <strong>controller support</strong>, so it plays on a gamepad.</li>
               <li>Still contributing as the game keeps growing.</li>
             </ul>
-            <ul class="chips"><li>Unity</li><li>Mobile port</li><li>Controller support</li></ul>
-            <div class="links"><a class="link" href="work.html#rollgeon-port">Case study →</a><a class="link" href="https://3amgamesstudio.itch.io/rollgeon">itch.io ↗</a></div>
+            <ul class="chips"><li>Mobile port</li><li>Touch controls</li><li>Safe area</li><li>Controller support</li></ul>
+            <div class="links"><a class="link" href="work.html#rollgeon-port">Case study <span class="arr" aria-hidden="true">→</span></a><a class="link" href="https://3amgamesstudio.itch.io/rollgeon">itch.io <span class="arr arr--out" aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -135,17 +131,16 @@
             <a class="yt" href="https://www.youtube.com/watch?v=Ym1u3FD-qyw" data-yt="Ym1u3FD-qyw" data-title="Waxy: The Wick and the Witch, official trailer" aria-label="Play video: Waxy: The Wick and the Witch, official trailer (loads YouTube)"><img src="assets/projects/waxy-yt.jpg" alt="" width="1280" height="720" loading="lazy"><span class="yt__play" aria-hidden="true">&#9654; Play trailer</span></a>
           </div>
           <div class="card__body">
-            <span class="tag">PC · Indie · 3AM Games Studio</span>
             <h3>Waxy: The Wick and the Witch</h3>
-            <p class="role">Lead Unity Developer · 5-person team · 26 months</p>
+            <p class="role">Lead Unity Developer · 5-person team · 26 months · PC · Indie · 3AM Games Studio</p>
             <p>A 3D puzzle-platformer. The <strong>rework of the core mechanic</strong> I led got it selected for the <strong>ADVA MPVP</strong> mentorship program.</p>
             <ul class="facts">
               <li><strong>Technical direction</strong>: core mechanics, camera system and modular architecture.</li>
               <li>Wrote <strong>10 of the project's 14 custom editor tools</strong>.</li>
               <li>Presented at industry expos and business rounds across Argentina.</li>
             </ul>
-            <ul class="chips"><li>Unity</li><li>C#</li><li>Editor tools</li><li>Cinemachine</li><li>uGUI</li></ul>
-            <div class="links"><a class="link" href="https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch">itch.io ↗</a></div>
+            <ul class="chips"><li>Unity</li><li>C#</li><li>Editor tools</li><li>Cinemachine</li></ul>
+            <div class="links"><a class="link" href="https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch">itch.io <span class="arr arr--out" aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -153,9 +148,8 @@
           <div class="tb">spca-x-solar.unity</div>
           <div class="card__media"><a class="zoom" href="assets/projects/spca-cover.png"><img src="assets/projects/spca-cover.png" alt="SPCA × SOLAR" loading="lazy"></a></div>
           <div class="card__body">
-            <span class="tag">Mobile · Campaign · Project lead</span>
             <h3>SPCA × SOLAR</h3>
-            <p class="role">Technical direction · 9-person team</p>
+            <p class="role">Technical direction · 9-person team · Mobile · Campaign · Project lead</p>
             <p>A time-limited cat-rescue game built as a campaign with <strong>SPCA</strong>, an animal rescue in Singapore.</p>
             <ul class="facts">
               <li>Owned it <strong>end-to-end</strong> and delivered within a fixed campaign window.</li>
@@ -170,16 +164,15 @@
           <div class="tb">unity-tools/</div>
           <div class="card__media"><a class="zoom" href="assets/projects/unity-tools.png"><img src="assets/projects/unity-tools.png" alt="Asset Renamer settings window" loading="lazy"></a></div>
           <div class="card__body">
-            <span class="tag">Open source · Editor tooling</span>
             <h3>Unity Tools</h3>
-            <p class="role">Solo developer</p>
+            <p class="role">Solo developer · Open source · Editor tooling</p>
             <p>Five editor tools published as <strong>UPM packages</strong>, installable from a Git URL.</p>
             <ul class="facts">
               <li><strong>Asset Renamer</strong>: bulk renaming from a rule set the whole team shares.</li>
               <li>PlayerPrefs Manager, Prefab Replacer, Project Zipper and Rename Items.</li>
             </ul>
             <ul class="chips"><li>C#</li><li>UPM</li><li>Editor Windows</li></ul>
-            <div class="links"><a class="link" href="https://github.com/LucaValentini25/Unity-Tools">GitHub ↗</a></div>
+            <div class="links"><a class="link" href="https://github.com/LucaValentini25/Unity-Tools">GitHub <span class="arr arr--out" aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -187,9 +180,8 @@
           <div class="tb">red-button.unity</div>
           <div class="card__media"><a class="zoom" href="assets/projects/redbutton-cover.png"><img src="assets/projects/redbutton-cover.png" alt="You Can't Always Push the Red Button" loading="lazy"></a></div>
           <div class="card__body">
-            <span class="tag">Web · Game jam</span>
             <h3>You Can't Always Push the Red Button</h3>
-            <p class="role">3-day jam game · Unity BA Game Jam 2026</p>
+            <p class="role">3-day jam game · Unity BA Game Jam 2026 · Web · Game jam</p>
             <p>You rule a cat nation and try not to just push the red button.</p>
             <ul class="facts">
               <li>Programming shared with Ignacio Martinez, in a 3-person team.</li>
@@ -197,7 +189,7 @@
               <li>Made with <strong>Claude Code</strong>; playable in the browser (<strong>WebGL</strong>).</li>
             </ul>
             <ul class="chips"><li>Unity</li><li>C#</li><li>WebGL</li><li>Claude Code</li></ul>
-            <div class="links"><a class="link" href="https://zathmell.itch.io/you-cant-always-push-the-red-button">Play on itch.io ↗</a></div>
+            <div class="links"><a class="link" href="https://zathmell.itch.io/you-cant-always-push-the-red-button">Play on itch.io <span class="arr arr--out" aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -205,9 +197,8 @@
           <div class="tb">indie-community-bot/</div>
           <div class="card__media card__media--empty card__media--stat"><span><b>Discord bot</b>running on Rollgeon's community server</span></div>
           <div class="card__body">
-            <span class="tag">Tooling · Outside Unity · Open source</span>
             <h3>Indie Community Bot</h3>
-            <p class="role">Solo developer</p>
+            <p class="role">Solo developer · Tooling · Outside Unity · Open source</p>
             <p>A reusable <strong>Discord bot</strong> for indie game communities, running on Rollgeon's server.</p>
             <ul class="facts">
               <li>Welcome cards, devlogs and <strong>build notifications from CI</strong>.</li>
@@ -215,7 +206,7 @@
               <li>Settings live per server in the database: a new community is a new row, not a fork.</li>
             </ul>
             <ul class="chips"><li>TypeScript</li><li>discord.js</li><li>SQLite</li></ul>
-            <div class="links"><a class="link" href="https://github.com/LucaValentini25/indie-community-bot">GitHub ↗</a></div>
+            <div class="links"><a class="link" href="https://github.com/LucaValentini25/indie-community-bot">GitHub <span class="arr arr--out" aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -225,16 +216,15 @@
             <video src="assets/projects/brainapp-demo.mp4" poster="assets/projects/brainapp-demo.png" controls muted playsinline preload="none" aria-label="Brain App demo"></video>
           </div>
           <div class="card__body">
-            <span class="tag">Python · AI · Architecture</span>
             <h3>Brain App</h3>
-            <p class="role">Solo developer · personal project</p>
+            <p class="role">Solo developer · personal project · Python · AI · Architecture</p>
             <p>A <strong>local-first AI assistant</strong> where the LLM never decides an action: it understands what you ask, and deterministic code does the work.</p>
             <ul class="facts">
               <li>Runs end to end with <strong>no cloud</strong>; cloud models are optional.</li>
               <li>Switch between <strong>4 model backends</strong> live, without restarting.</li>
               <li><strong>RAG</strong> memory inside the same SQLite database, and it keeps working if the model is down.</li>
             </ul>
-            <ul class="chips"><li>Python</li><li>FastAPI</li><li>SQLite</li><li>Vue 3</li><li>Ollama</li></ul>
+            <ul class="chips"><li>Python</li><li>FastAPI</li><li>SQLite</li><li>Vue 3</li></ul>
             <div class="links"><a class="link zoom" href="assets/projects/brainapp-architecture.png">Architecture diagram</a><span class="muted">Private repo</span></div>
           </div>
         </article>
