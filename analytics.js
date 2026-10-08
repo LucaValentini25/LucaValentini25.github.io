@@ -4,12 +4,12 @@
 // Mide: páginas vistas, visitas y páginas por visita, referrer, país, navegador,
 // sistema operativo y dispositivo. No identifica personas.
 //
-// COMPLETAR: pegar acá el Website ID que da Umami al crear el sitio
-// (Settings → Websites → Add website → dominio lucavalentini25.github.io).
-// Mientras diga REEMPLAZAR, no se carga nada ni se contacta a Umami.
+// Website ID de Umami (cargado el 08/10/2026). Si se recrea el sitio en Umami,
+// reemplazarlo acá (Settings → Websites → lucavalentini25.github.io).
+// Solo se carga en el dominio real: localhost y previews no cuentan.
 // ============================================================
 (function () {
-  const WEBSITE_ID = 'REEMPLAZAR-UMAMI-WEBSITE-ID';
+  const WEBSITE_ID = '00365882-d921-4aa7-abd2-eebc42bb58cc';
   const DOMAIN = 'lucavalentini25.github.io'; // no cuenta visitas en localhost ni en previews
 
   if (WEBSITE_ID.startsWith('REEMPLAZAR') || location.hostname !== DOMAIN) return;
