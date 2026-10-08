@@ -57,7 +57,8 @@
       },
       "sameAs": [
         "https://www.linkedin.com/in/lucavalentinidev",
-        "https://github.com/LucaValentini25"
+        "https://github.com/LucaValentini25",
+        "https://www.instagram.com/clastergamedev/"
       ],
       "knowsAbout": [
         "Addressables",
@@ -129,20 +130,6 @@
       ]
     },
     {
-      "@type": "VideoGame",
-      "@id": "https://lucavalentini25.github.io/projects.html#waxy",
-      "name": "Waxy: The Wick and the Witch",
-      "description": "3D puzzle-platformer by 3AM Games Studio. Wax is your health, your height as you melt, and the reach of your flame. Fully playable on a gamepad, menus included.",
-      "creator": {
-        "@id": "https://lucavalentini25.github.io/#person"
-      },
-      "keywords": "Unity, C#, Editor tools, Cinemachine, uGUI",
-      "url": "https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch",
-      "gamePlatform": [
-        "PC"
-      ]
-    },
-    {
       "@type": "SoftwareSourceCode",
       "@id": "https://lucavalentini25.github.io/projects.html#snackdown",
       "name": "Snackdown",
@@ -168,6 +155,20 @@
       "gamePlatform": [
         "Web",
         "Mobile (in progress)"
+      ]
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://lucavalentini25.github.io/projects.html#waxy",
+      "name": "Waxy: The Wick and the Witch",
+      "description": "3D puzzle-platformer by 3AM Games Studio, selected for the ADVA MPVP mentorship program after a rework of its core mechanic.",
+      "creator": {
+        "@id": "https://lucavalentini25.github.io/#person"
+      },
+      "keywords": "Unity, C#, Editor tools, Cinemachine, uGUI",
+      "url": "https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch",
+      "gamePlatform": [
+        "PC"
       ]
     },
     {
@@ -262,8 +263,8 @@
       <div class="win">
         <div class="tb">hello-im-luca.md</div>
         <div class="win__body hero__copy">
-          <div class="hero__me"><img src="assets/me.jpg" alt="Luca Valentini" width="120" height="120"><div><b>Hi, I'm Luca.</b><span>Senior Unity Developer · Buenos Aires</span></div></div>
-          <h1 class="hero__title">I build the systems a game runs on, and the tools the team builds it with.</h1>
+          <div class="hero__me"><img src="assets/me.jpg" alt="Luca Valentini" width="120" height="120"><div><b>Hi, I'm Luca.</b><span class="roles"><span class="role-pill role-pill--main">Senior Unity Developer</span><span class="role-pill">Software Developer</span></span></div></div>
+          <h1 class="hero__title">I build the systems a game runs on, and the tools that make the whole team faster.</h1>
           <p class="hero__lead">Senior Unity Developer in studio teams since 2023. Until September 2026 I was on SOLAR, a live free-to-play mobile game, where I owned the character dressing system. I also lead the technical direction of Waxy, a 3D puzzle-platformer.</p>
           <div class="actions"><a class="btn btn--primary" href="work.html">See how I solve problems</a><a class="btn btn--secondary" href="contact.html">Get in touch</a></div>
           <ul class="hero__meta"><li>Buenos Aires, Argentina</li><li>Remote, worldwide</li><li class="status">Available now</li></ul>
@@ -279,9 +280,9 @@
         <div class="win__body">
           <header class="sec-head"><span class="eyebrow">What I do</span><h2>Three things I'm consistently the person for on a team.</h2></header>
           <div class="grid3 pillars">
-            <article class="pillar"><span class="pillar__n">Tooling &amp; automation</span><h3>Make the slow, repetitive work disappear</h3><p>Custom editor windows and automation that turn error-prone setup into fast, validated workflows, inside Unity and outside it.</p></article>
-            <article class="pillar"><span class="pillar__n">Game systems</span><h3>Structured, self-contained systems</h3><p>Inventory, equipment, data-driven content: modular architecture that's easy to extend, and that the rest of the team can work on safely.</p></article>
-            <article class="pillar"><span class="pillar__n">Performance</span><h3>Run on the phones players own</h3><p>Profiling-driven optimization with the Jobs System, Burst and render tuning, measured on device rather than in the editor.</p></article>
+            <article class="pillar"><span class="pillar__n">Tooling &amp; automation</span><h3>Make slow &amp; repetitive work disappear</h3><p>Custom editor windows and automation that turn error-prone setup into fast, validated workflows, inside Unity and outside it.</p></article>
+            <article class="pillar"><span class="pillar__n">Game systems</span><h3>Structured &amp; self-contained systems</h3><p>Inventory, equipment, data-driven content: modular architecture that's easy to extend, and that the rest of the team can work on safely.</p></article>
+            <article class="pillar"><span class="pillar__n">Performance</span><h3>Run on the phones players own</h3><p>If it only runs well in the editor, it doesn't count. I profile real builds on mid-range phones and fix what they show, with the Jobs System, Burst and render tuning.</p></article>
           </div>
         </div>
       </div>
@@ -295,11 +296,11 @@
         <div class="win__body">
           <header class="sec-head"><span class="eyebrow">Selected work</span><h2>Real problems from shipped games.</h2><p>The approach, the tools, and what I actually built.</p></header>
           <div class="grid3">
-            <a class="card" href="work.html#npc-gpu"><div class="card__media"><img src="assets/work/npc-after.png" alt="NPC crowd rendered on the GPU" loading="lazy"></div><div class="card__body"><span class="tag">SOLAR · Performance</span><h3>A full NPC crowd on mid-range Android</h3><p>GPU skinning with a custom animation baker, draws grouped by the mesh being drawn.</p><span class="metric">10 → 200 fps</span></div></a>
-            <a class="card" href="work.html#dressing"><div class="card__media"><img src="assets/work/dressing-ingame.png" alt="The dressing system in game" loading="lazy"></div><div class="card__body"><span class="tag">SOLAR · Game systems</span><h3>A character dressing system</h3><p>Node-graph garments with backend sync and 8 authoring tools. The same data dresses the player and the crowd.</p><span class="metric">Owned end-to-end</span></div></a>
-            <a class="card" href="work.html#waxy-tools"><div class="card__media"><img src="assets/projects/waxy-1.png" alt="Waxy: The Wick and the Witch" loading="lazy"></div><div class="card__body"><span class="tag">Waxy · Tooling</span><h3>Editor tools that killed the level-building overhead</h3><p>Convert blockouts to final prefabs in batch, and assign localization keys across every Timeline.</p><span class="metric">10 of 14 tools</span></div></a>
+            <a class="card" href="work.html#dressing"><div class="card__media"><img src="assets/work/dressing-ingame.png" alt="The dressing system in game" loading="lazy"></div><div class="card__body"><span class="tag">SOLAR · Game systems</span><h3>A character dressing system</h3><p>Node-graph garments, an in-game coin shop backed by the API, and 8 authoring tools. The same data dresses the player and the crowd.</p><span class="metric">Owned end-to-end</span></div></a>
+            <a class="card" href="work.html#npc-gpu"><div class="card__media"><img src="assets/work/npc-after.png" alt="NPC crowd rendered on the GPU" loading="lazy"></div><div class="card__body"><span class="tag">SOLAR · Performance</span><h3>A full NPC crowd on mid-range Android</h3><p>GPU skinning with a custom Vertex Texture Animation (VAT) baker, draws grouped by mesh.</p><span class="metric">10 → 200 fps</span></div></a>
+            <a class="card" href="work.html#rollgeon-port"><div class="card__media"><img src="assets/projects/rollgeon-yt.jpg" alt="Rollgeon" loading="lazy"></div><div class="card__body"><span class="tag">Rollgeon · Mobile port</span><h3>Taking a browser roguelike to phones and controllers</h3><p>Ported Rollgeon to mobile and added full controller support, and I keep contributing as it grows.</p><span class="metric">Mobile + gamepad</span></div></a>
           </div>
-          <div class="sec-foot"><a class="btn btn--secondary" href="work.html">All seven case studies →</a></div>
+          <div class="sec-foot"><a class="btn btn--secondary" href="work.html">All eight case studies →</a></div>
         </div>
       </div>
     </div>
@@ -314,7 +315,7 @@
           <div class="grid3">
             <a class="card card--compact" href="projects.html#solar"><div class="card__media"><img src="assets/projects/solar-1.png" alt="SOLAR" loading="lazy"></div><div class="card__body"><span class="tag">Mobile · Live</span><h3>SOLAR</h3><p>Live geolocation/AR game on Google Play &amp; the App Store.</p></div></a>
             <a class="card card--compact" href="projects.html#waxy"><div class="card__media"><img src="assets/projects/waxy-yt.jpg" alt="Waxy" loading="lazy"></div><div class="card__body"><span class="tag">PC · Indie · 3AM Games Studio</span><h3>Waxy: The Wick and the Witch</h3><p>3D puzzle-platformer, selected for the ADVA MPVP program.</p></div></a>
-            <a class="card card--compact" href="projects.html#brain"><div class="card__media card__media--contain"><img src="assets/projects/brainapp-architecture.png" alt="Brain App architecture" loading="lazy"></div><div class="card__body"><span class="tag">Python · Architecture</span><h3>Brain App</h3><p>Local-first AI assistant. 323 tests, green in 77 seconds.</p></div></a>
+            <a class="card card--compact" href="projects.html#brain"><div class="card__media card__media--contain"><img src="assets/projects/brainapp-architecture.png" alt="Brain App architecture" loading="lazy"></div><div class="card__body"><span class="tag">Python · Architecture</span><h3>Brain App</h3><p>Local-first AI assistant: the LLM understands what you ask, and deterministic code does the work.</p></div></a>
           </div>
         </div>
       </div>
@@ -328,7 +329,7 @@
         <div class="win__body cta__body">
           <h2>Building a game that needs a solid technical core?</h2>
           <p>I'm available now for Senior Unity Developer roles, remote, worldwide.</p>
-          <div class="actions"><a class="btn btn--primary" href="contact.html">Let's talk</a><a class="btn btn--secondary" href="mailto:lucavalentini25@gmail.com">lucavalentini25@gmail.com</a></div>
+          <div class="actions"><a class="btn btn--primary" href="contact.html">Let's talk</a></div>
         </div>
       </div>
     </div>
@@ -337,13 +338,19 @@
 
   <footer class="footer">
     <div class="wrap footer__inner">
-      <span>&copy; <span id="year">2026</span> Luca Valentini</span>
+      <div class="footer__id">
+        <span>&copy; <span id="year">2026</span> Luca Valentini</span>
+        <!-- Íconos: Lucide (ISC), ver assets/icons/LICENSE-lucide.txt -->
+        <nav class="footer__social" aria-label="Social profiles">
+          <a href="https://github.com/LucaValentini25"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/lucavalentinidev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg><span>LinkedIn</span></a>
+          <a href="https://www.instagram.com/clastergamedev/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><span>Instagram</span></a>
+        </nav>
+      </div>
       <nav class="footer__links" aria-label="Legal and data">
         <a href="privacy.html">Privacy</a>
         <a href="llms.txt">llms.txt</a>
         <a href="profile.json">profile.json</a>
-        <a href="https://github.com/LucaValentini25">GitHub</a>
-        <a href="https://www.linkedin.com/in/lucavalentinidev">LinkedIn</a>
       </nav>
     </div>
   </footer>

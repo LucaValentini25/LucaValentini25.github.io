@@ -49,10 +49,10 @@
       <div class="win">
         <div class="tb">work/README.md</div>
         <div class="win__body">
-          <span class="eyebrow">Tools &amp; solutions</span>
+          <span class="eyebrow">Case studies</span>
           <h1 class="pagehero__title">How I solve problems.</h1>
-          <p class="pagehero__lead">Seven real problems from shipped games, open-source work and prototypes. Each one: the problem, the approach, how it works, and what I built.</p>
-          <nav class="toc"><a href="#waxy-tools">Level-building tools</a><a href="#npc-gpu">NPC crowd on the GPU</a><a href="#kykuyo-tooling">Internal tooling</a><a href="#dressing">Dressing system</a><a href="#camera">Camera contexts</a><a href="#external">External tooling</a><a href="#snackdown">Multiplayer netcode</a></nav>
+          <p class="pagehero__lead">Eight real problems from shipped games, open-source work and prototypes. Each one: the problem, the approach, how it works, and what I built.</p>
+          <nav class="toc" aria-label="Case studies"><a href="#dressing">Dressing system</a><a href="#npc-gpu">NPC crowd on the GPU</a><a href="#snackdown">Multiplayer netcode</a><a href="#rollgeon-port">Mobile port</a><a href="#kykuyo-tooling">Internal tooling</a><a href="#camera">Camera contexts</a><a href="#waxy-tools">Level-building tools</a><a href="#external">External tooling</a></nav>
         </div>
       </div>
     </div>
@@ -61,17 +61,17 @@
   <section class="section cases">
     <div class="wrap">
 
-      <article class="case win" id="waxy-tools">
-        <div class="tb">01-level-building-tools.md</div>
+      <article class="case win" id="dressing">
+        <div class="tb">01-dressing-system.md</div>
         <div class="win__body case__grid">
-          <header class="case__head"><span class="eyebrow">Waxy: The Wick and the Witch · Tooling</span><h2>The repetitive work that was eating level production</h2><span class="metric">10 of the project's 14 editor tools</span></header>
-          <figure class="case__media"><img src="assets/projects/waxy-1.png" alt="Waxy: The Wick and the Witch in game" loading="lazy"><figcaption>Waxy: The Wick and the Witch, in game.</figcaption></figure>
+          <header class="case__head"><span class="eyebrow">SOLAR · Game systems</span><h2>A dressing system that survives every content drop</h2><span class="metric">Owned end-to-end · 8 authoring tools</span></header>
+          <figure class="case__media"><video src="assets/work/dressing-ingame.mp4" poster="assets/work/dressing-ingame.png" autoplay muted loop playsinline aria-label="The dressing system in the published app"></video><figcaption>The dressing system in the published app.</figcaption></figure>
           <dl class="case__steps">
-            <div><dt>Problem</dt><dd>Building levels meant converting grey ProBuilder blockouts into prefabs one by one, chasing duplicated materials, and typing localization keys clip by clip into Timelines. Overhead on top of design work.</dd></div>
-            <div><dt>Approach</dt><dd>Attack each bottleneck where it lived, rather than one big editor: 10 tools, each aimed at a specific piece of manual work, plus a data-driven tuning layer on ScriptableObjects.</dd></div>
+            <div><dt>Problem</dt><dd>Players build an avatar from garments they buy in an in-game shop with coins. The same clothes render on the player and on the NPC crowd, the catalogue grows with every content drop, and the people adding outfits aren't programmers.</dd></div>
+            <div><dt>Approach</dt><dd>Describe garments as data in a node graph instead of assembling them by hand, and give the team purpose-built authoring tools instead of the Inspector.</dd></div>
+            <div><dt>How it works</dt><dd>A garment graph describes each outfit's parts, slots and palettes. The shop asks the API for the items you can buy, and the ones you already own, with their prices; buying one is a request to the API. Assets load through Addressables, so only what's worn stays in memory, and the same data feeds the GPU-rendered crowd.</dd></div>
           </dl>
-          <div class="case__full case__how"><h3>How it works</h3><p><b>Replace ProBuilder For Prefab</b> converts blockouts into final prefabs in batch. The <b>Subtitle Localization Helper</b> walks every Timeline and writes the localization key back into each subtitle clip.</p></div>
-          <ul class="chips case__full"><li>Custom Editor Windows</li><li>ScriptableObjects</li><li>Unity Localization</li></ul>
+          <ul class="chips case__full"><li>Node-graph data model</li><li>Custom editor tooling</li><li>Addressables</li><li>Coin shop + API</li><li>ScriptableObjects</li></ul>
         </div>
       </article>
 
@@ -79,47 +79,73 @@
         <div class="tb">02-npc-crowd-gpu.md</div>
         <div class="win__body case__grid">
           <header class="case__head"><span class="eyebrow">SOLAR · Performance</span><h2>Filling a mobile city with NPCs without killing the frame</h2><span class="metric">10 → 200 fps, measured on device</span></header>
-          <figure class="case__media"><img src="assets/work/npc-before.png" alt="NPC crowd with Animators" loading="lazy"><img src="assets/work/npc-after.png" alt="Same crowd rendered on the GPU" loading="lazy"><figcaption>Same scene: Animators (top) vs. GPU skinning (bottom).</figcaption></figure>
+          <figure class="case__media">
+            <a class="zoom" href="assets/work/npc-before.png"><img src="assets/work/npc-before.png" alt="NPC crowd animated with Animators" loading="lazy"></a>
+            <a class="zoom" href="assets/work/npc-after.png"><img src="assets/work/npc-after.png" alt="The same crowd rendered on the GPU with Vertex Texture Animation" loading="lazy"></a>
+            <figcaption>Same scene: Animators (top) vs. GPU skinning with VAT (bottom). Click to enlarge.</figcaption>
+          </figure>
           <dl class="case__steps">
-            <div><dt>Problem</dt><dd>A geolocation game set in a living city needs crowds of NPCs, each wearing clothing from the same dressing system as the player. One animator and one draw call per character: on a mid-range Android phone, that budget disappears fast.</dd></div>
-            <div><dt>Approach</dt><dd>Move NPC animation and rendering onto the GPU, and group draws by what the GPU cares about, the mesh being drawn, rather than by which character owns it.</dd></div>
-            <div><dt>How it works</dt><dd>Animation clips are baked into texture data at edit time, so skinning happens in the shader. The same garment on different NPCs still batches together. The per-frame update runs off the main thread as a Burst-compiled job.</dd></div>
+            <div><dt>Problem</dt><dd>A geolocation game set in a living city needs crowds of NPCs, each wearing clothes from the same dressing system as the player. That meant one Animator per character and a draw call for every garment piece and the body: on a mid-range Android phone, that budget disappears fast.</dd></div>
+            <div><dt>Approach</dt><dd>Move NPC animation and rendering onto the GPU with Vertex Texture Animation (VAT), and group draws by what the GPU cares about, the mesh being drawn, not the character that owns it.</dd></div>
+            <div><dt>How it works</dt><dd>A custom VAT baker bakes animation clips into textures at edit time, so skinning happens in the shader. The same garment on different NPCs batches together, and the per-frame update runs off the main thread as a Burst-compiled job.</dd></div>
           </dl>
-          <ul class="chips case__full"><li>GPU skinning</li><li>Custom animation baker</li><li>Jobs System</li><li>Burst Compiler</li><li>HLSL</li></ul>
+          <ul class="chips case__full"><li>GPU skinning</li><li>Vertex Texture Animation</li><li>Jobs System</li><li>Burst Compiler</li><li>HLSL</li></ul>
+        </div>
+      </article>
+
+      <article class="case win" id="snackdown">
+        <div class="tb">03-snackdown-netcode.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">Snackdown · Multiplayer · Open source</span><h2>Making a multiplayer platformer the server can trust</h2><span class="metric">Client prediction + server reconciliation, written by hand</span></header>
+          <figure class="case__media case__media--stats"><div class="statgrid"><div><b>By hand</b><span>prediction and reconciliation: Netcode for GameObjects doesn't include them</span></div><div><b>30 Hz</b><span>fixed network tick, separate from the framerate</span></div><div><b>2</b><span>corrections in 79 s on a home network (2% loss, 367 ms RTT)</span></div><div><b>4</b><span>players, host over Unity Relay</span></div></div><figcaption>Measured with the Netcode for GameObjects network simulator.</figcaption></figure>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>My final project for a university networking course worked, but clients wrote their own positions, sent RPCs every frame and joined without any approval. Any client could move anywhere, at any speed.</dd></div>
+            <div><dt>Approach</dt><dd>Rebuild it from scratch as server-authoritative, and build the client-side prediction and server reconciliation myself on top of Netcode for GameObjects' tick system, because Unity doesn't ship them.</dd></div>
+            <div><dt>How it works</dt><dd>A kinematic controller with one pure step function runs on both client and server, so the client predicts and the server confirms. Input goes out unreliable with the last 3 commands for redundancy; the server sends one snapshot per tick for every player, and remote players are interpolated about 100 ms behind.</dd></div>
+          </dl>
+          <div class="case__full case__how"><h3>Also</h3><p><b>Connection approval</b> with a payload (nickname, character, version check), and the same join flow by <b>Relay code or LAN IP</b> behind one interface. <b>EditMode tests</b> cover the simulation, including replay determinism: 40 simulated ticks run twice give a bit-identical result. Built with Claude Code.</p></div>
+          <ul class="chips case__full"><li>Netcode for GameObjects</li><li>Unity Transport</li><li>Relay / Lobby</li><li>Client-side prediction</li><li>Server reconciliation</li><li>Snapshot interpolation</li><li>EditMode tests</li></ul>
+          <a class="link case__full" href="https://github.com/LucaValentini25/Snackdown">See the repo on GitHub ↗</a>
+        </div>
+      </article>
+
+      <!-- REVISAR: el caso de Rollgeon está escrito solo con lo confirmado (port a mobile + soporte de mando,
+           sigue en desarrollo). Falta el "How it works": qué implicó el port (controles táctiles, UI para
+           pantallas chicas, rendimiento, plataformas Android/iOS, sistema de input). Completar con Luca. -->
+      <article class="case win" id="rollgeon-port">
+        <div class="tb">04-rollgeon-mobile-port.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">Rollgeon · Mobile port · In development</span><h2>Taking a browser roguelike to phones and controllers</h2><span class="metric">Mobile port + controller support</span></header>
+          <figure class="case__media">
+            <a class="yt" href="https://www.youtube.com/watch?v=tV2u1QosCds" data-yt="tV2u1QosCds" data-title="Rollgeon reveal trailer" aria-label="Play video: Rollgeon reveal trailer (loads YouTube)"><img src="assets/projects/rollgeon-yt.jpg" alt="" width="1280" height="720" loading="lazy"><span class="yt__play" aria-hidden="true">&#9654; Play trailer</span></a>
+            <figcaption>Rollgeon reveal trailer, by 3AM Games.</figcaption>
+          </figure>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>Rollgeon, a roguelike dice builder started by members of 3AM Games, was built to be played with keyboard and mouse in the browser. Many players, and many studios, want games like this on their phones.</dd></div>
+            <div><dt>Approach</dt><dd>Port it to mobile and add controller support, so the same game plays on a phone and with a gamepad.</dd></div>
+            <div><dt>Now</dt><dd>The game is still in development and I keep contributing to it.</dd></div>
+          </dl>
+          <ul class="chips case__full"><li>Unity</li><li>Mobile port</li><li>Controller support</li></ul>
+          <a class="link case__full" href="https://3amgamesstudio.itch.io/rollgeon">Rollgeon on itch.io ↗</a>
         </div>
       </article>
 
       <article class="case win" id="kykuyo-tooling">
-        <div class="tb">03-internal-tooling.md</div>
+        <div class="tb">05-internal-tooling.md</div>
         <div class="win__body case__grid">
           <header class="case__head"><span class="eyebrow">SOLAR · Automation</span><h2>Internal tooling for the work nobody should do by hand</h2><span class="metric">9 of the project's 35 editor tools</span></header>
+          <figure class="case__media"><a class="zoom" href="assets/projects/unity-tools.png"><img src="assets/projects/unity-tools.png" alt="Asset Renamer settings window with the shared naming rules" loading="lazy"></a><figcaption>Asset Renamer: one naming convention the whole team shares. Click to enlarge.</figcaption></figure>
           <dl class="case__steps">
             <div><dt>Problem</dt><dd>A live mobile game accumulates chores: Addressable groups in sync with folders, regenerating the API client when the backend changes, clearing QA state, cutting builds with the right keystore and version. Each one done by hand is a chance to break a build.</dd></div>
             <div><dt>Approach</dt><dd>Build the tools where the chores were, as named editor utilities the whole team could use, not scripts living on my machine.</dd></div>
-          </dl>
-          <dl class="case__steps">
             <div><dt>How it works</dt><dd>An <b>Addressables Folder Manager</b> drives group membership from the folder layout. A <b>build-and-API suite</b> regenerates the typed client safely, cleans QA state, and handles keystore validation and version injection. A <b>Mesh Instance Baker</b> speeds up scene authoring.</dd></div>
           </dl>
           <ul class="chips case__full"><li>Custom Editor Tooling</li><li>Addressables</li><li>Code generation</li><li>Build automation</li></ul>
         </div>
       </article>
 
-      <article class="case win" id="dressing">
-        <div class="tb">04-dressing-system.md</div>
-        <div class="win__body case__grid">
-          <header class="case__head"><span class="eyebrow">SOLAR · Game systems</span><h2>A dressing system that survives every content drop</h2><span class="metric">Owned end-to-end · 8 authoring tools</span></header>
-          <figure class="case__media"><video src="assets/work/dressing-ingame.mp4" poster="assets/work/dressing-ingame.png" autoplay muted loop playsinline></video><figcaption>The dressing system in the published app.</figcaption></figure>
-          <dl class="case__steps">
-            <div><dt>Problem</dt><dd>Players build an avatar out of garments that come from the backend, get bought in a store, render on the player and the NPC crowd, and keep growing with every content drop. The people adding outfits aren't programmers.</dd></div>
-            <div><dt>Approach</dt><dd>Describe garments as data in a node graph instead of assembling them by hand, and give the team purpose-built authoring tools instead of the Inspector.</dd></div>
-            <div><dt>How it works</dt><dd>A garment graph describes each outfit's parts, slots and palettes, synced with the backend catalogue. Assets load through Addressables, so only what's worn stays in memory. The same data feeds the GPU-skinned crowd.</dd></div>
-          </dl>
-          <ul class="chips case__full"><li>Node-graph data model</li><li>Custom editor tooling</li><li>Addressables</li><li>Backend sync</li><li>ScriptableObjects</li></ul>
-        </div>
-      </article>
-
       <article class="case win" id="camera">
-        <div class="tb">05-camera-contexts.md</div>
+        <div class="tb">06-camera-contexts.md</div>
         <div class="win__body case__grid">
           <header class="case__head"><span class="eyebrow">SOLAR · Architecture</span><h2>When everything wants to control the camera</h2><span class="metric">Enforced by the compiler</span></header>
           <dl class="case__steps">
@@ -133,11 +159,25 @@
         </div>
       </article>
 
+      <article class="case win" id="waxy-tools">
+        <div class="tb">07-level-building-tools.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">Waxy: The Wick and the Witch · Tooling</span><h2>The repetitive work that was eating level production</h2><span class="metric">10 of the project's 14 editor tools</span></header>
+          <figure class="case__media"><a class="zoom" href="assets/projects/waxy-1.png"><img src="assets/projects/waxy-1.png" alt="Waxy: The Wick and the Witch, in game" loading="lazy"></a><figcaption>Waxy: The Wick and the Witch, in game.</figcaption></figure>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>Building levels meant converting grey ProBuilder blockouts into prefabs one by one, chasing duplicated materials, and typing localization keys clip by clip into Timelines. Overhead on top of design work.</dd></div>
+            <div><dt>Approach</dt><dd>Attack each bottleneck where it lived, rather than one big editor: 10 tools, each aimed at a specific piece of manual work, plus a data-driven tuning layer on ScriptableObjects.</dd></div>
+          </dl>
+          <div class="case__full case__how"><h3>How it works</h3><p><b>Replace ProBuilder For Prefab</b> converts blockouts into final prefabs in batch. The <b>Subtitle Localization Helper</b> walks every Timeline and writes the localization key back into each subtitle clip.</p></div>
+          <ul class="chips case__full"><li>Custom Editor Windows</li><li>ScriptableObjects</li><li>Unity Localization</li></ul>
+        </div>
+      </article>
+
       <article class="case win" id="external">
-        <div class="tb">06-external-tooling.md</div>
+        <div class="tb">08-external-tooling.md</div>
         <div class="win__body case__grid">
           <header class="case__head"><span class="eyebrow">Personal prototype · External tooling</span><h2>Building the tool where the problem actually is</h2><span class="metric">Working prototype</span></header>
-          <figure class="case__media"><img src="assets/work/external-tooling.png" alt="Slack bug-ticket bot" loading="lazy"><figcaption>Slack ticket bot, backed by Google Sheets.</figcaption></figure>
+          <figure class="case__media"><a class="zoom" href="assets/work/external-tooling.png"><img src="assets/work/external-tooling.png" alt="Slack bug-ticket bot" loading="lazy"></a><figcaption>Slack ticket bot, backed by Google Sheets. Click to enlarge.</figcaption></figure>
           <dl class="case__steps">
             <div><dt>Problem</dt><dd>Filing a bug meant leaving the conversation, opening a tracker and re-typing the context, so small issues quietly went unreported.</dd></div>
             <div><dt>Approach</dt><dd>If the friction is in Slack, the tool belongs in Slack: a bot that turns a message into a tracked ticket, with a spreadsheet as a lightweight backend.</dd></div>
@@ -147,35 +187,25 @@
         </div>
       </article>
 
-
-      <article class="case win" id="snackdown">
-        <div class="tb">07-snackdown-netcode.md</div>
-        <div class="win__body case__grid">
-          <header class="case__head"><span class="eyebrow">Snackdown · Multiplayer · Open source</span><h2>Making a multiplayer platformer the server can trust</h2><span class="metric">0.302 u median prediction error at 20% packet loss</span></header>
-          <figure class="case__media case__media--stats"><div class="statgrid"><div><b>30 Hz</b><span>fixed network tick, separate from framerate</span></div><div><b>0.302 u</b><span>median prediction error at 20% packet loss, a third of the character's width</span></div><div><b>2</b><span>corrections in 79 s on a home network (2% loss, 367 ms RTT)</span></div><div><b>4</b><span>players, host over Unity Relay</span></div></div><figcaption>Measured with the Netcode for GameObjects network simulator, with a reproducible procedure and CSV export.</figcaption></figure>
-          <dl class="case__steps">
-            <div><dt>Problem</dt><dd>My final project for a university networking course worked, but clients wrote their own positions, sent RPCs every frame and joined without any approval. Any client could move anywhere, at any speed.</dd></div>
-            <div><dt>Approach</dt><dd>Rebuild it from scratch as server-authoritative, with the client-side prediction and server reconciliation that Netcode for GameObjects doesn't ship, written by hand on its tick system.</dd></div>
-            <div><dt>How it works</dt><dd>A kinematic controller with one pure step function runs on both client and server, so the client predicts and the server confirms. Input goes out unreliable with the last 3 commands for redundancy; the server sends one snapshot per tick for every player, and remote players are interpolated about 100 ms behind.</dd></div>
-          </dl>
-          <div class="case__full case__how"><h3>Also</h3><p><b>Connection approval</b> with a payload (nickname, character, version check), and the same join flow by <b>Relay code or LAN IP</b> behind one interface. <b>EditMode tests</b> cover the simulation, including replay determinism: 40 simulated ticks run twice give a bit-identical result. Built with Claude Code.</p></div>
-          <ul class="chips case__full"><li>Netcode for GameObjects</li><li>Unity Transport</li><li>Relay / Lobby</li><li>Client-side prediction</li><li>Server reconciliation</li><li>Snapshot interpolation</li><li>EditMode tests</li></ul>
-          <a class="link case__full" href="https://github.com/LucaValentini25/Snackdown">See the repo on GitHub ↗</a>
-        </div>
-      </article>
     </div>
   </section>
   </main>
 
   <footer class="footer">
     <div class="wrap footer__inner">
-      <span>&copy; <span id="year">2026</span> Luca Valentini</span>
+      <div class="footer__id">
+        <span>&copy; <span id="year">2026</span> Luca Valentini</span>
+        <!-- Íconos: Lucide (ISC), ver assets/icons/LICENSE-lucide.txt -->
+        <nav class="footer__social" aria-label="Social profiles">
+          <a href="https://github.com/LucaValentini25"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/lucavalentinidev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg><span>LinkedIn</span></a>
+          <a href="https://www.instagram.com/clastergamedev/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><span>Instagram</span></a>
+        </nav>
+      </div>
       <nav class="footer__links" aria-label="Legal and data">
         <a href="privacy.html">Privacy</a>
         <a href="llms.txt">llms.txt</a>
         <a href="profile.json">profile.json</a>
-        <a href="https://github.com/LucaValentini25">GitHub</a>
-        <a href="https://www.linkedin.com/in/lucavalentinidev">LinkedIn</a>
       </nav>
     </div>
   </footer>

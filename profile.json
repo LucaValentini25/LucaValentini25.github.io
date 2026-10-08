@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Luca Valentini",
-    "label": "Senior Unity Developer, Systems & Tools Programmer",
+    "label": "Senior Unity Developer and Software Developer, systems & tools",
     "image": "https://lucavalentini25.github.io/assets/me.jpg",
     "email": "lucavalentini25@gmail.com",
     "url": "https://lucavalentini25.github.io",
@@ -22,6 +22,11 @@
         "network": "GitHub",
         "username": "LucaValentini25",
         "url": "https://github.com/LucaValentini25"
+      },
+      {
+        "network": "Instagram",
+        "username": "clastergamedev",
+        "url": "https://www.instagram.com/clastergamedev/"
       }
     ]
   },
@@ -33,8 +38,8 @@
       "endDate": "2026-09",
       "summary": "Worked on SOLAR, a live free-to-play geolocation/AR mobile game on Google Play and the App Store.",
       "highlights": [
-        "Owned the character dressing system end-to-end: a node-graph garment system with backend sync and 8 authoring tools.",
-        "Built the NPC GPU rendering pipeline: 10 to 200 fps measured on device with a full NPC crowd.",
+        "Owned the character dressing system end-to-end: a node-graph garment system with an in-game coin shop backed by the API, and 8 authoring tools.",
+        "Built the NPC GPU rendering pipeline with a custom Vertex Texture Animation (VAT) baker: 10 to 200 fps measured on device with a full NPC crowd.",
         "Designed the camera context system, with the layer boundary enforced by the compiler.",
         "Took the technical direction of SPCA x SOLAR across a 9-person team.",
         "Shipped the onboarding flow, the in-app purchase store and the HUD.",
@@ -192,26 +197,7 @@
         "Senior Unity Developer at KYKUYO"
       ],
       "highlights": [
-        "Owned the dressing system, the camera-context architecture and the NPC GPU rendering pipeline (10 to 200 fps on device)."
-      ]
-    },
-    {
-      "name": "Waxy: The Wick and the Witch",
-      "description": "3D puzzle-platformer by 3AM Games Studio. Wax is your health, your height as you melt, and the reach of your flame. Fully playable on a gamepad, menus included.",
-      "startDate": "2024-04",
-      "url": "https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch",
-      "keywords": [
-        "Unity",
-        "C#",
-        "Editor tools",
-        "Cinemachine",
-        "uGUI"
-      ],
-      "roles": [
-        "Lead Unity Developer, 5-person team"
-      ],
-      "highlights": [
-        "Led the rework of the core mechanic that got the project selected for the ADVA MPVP mentorship program; wrote 10 of its 14 custom editor tools."
+        "Owned the dressing system, the camera-context architecture and the NPC GPU rendering pipeline (10 to 200 fps on device). Shipped the IAP store, a typed API client from the OpenAPI spec and GPU instancing for vegetation."
       ]
     },
     {
@@ -227,10 +213,10 @@
         "Lobby"
       ],
       "roles": [
-        "Sole author"
+        "Solo developer"
       ],
       "highlights": [
-        "Measured 0.302 units median prediction error at 20% packet loss, and 2 corrections in 79 seconds on a home network. Up to 4 players, host over Unity Relay."
+        "Client-side prediction and server reconciliation written by hand on Netcode for GameObjects, which doesn't include them. 30 Hz tick, snapshot interpolation, up to 4 players over Unity Relay."
       ]
     },
     {
@@ -247,7 +233,26 @@
         "Mobile port and gamepad support, in collaboration with members of 3AM Games"
       ],
       "highlights": [
-        "Porting the game to mobile and adding controller support."
+        "Ported the game to mobile and added controller support; still contributing while it's in development."
+      ]
+    },
+    {
+      "name": "Waxy: The Wick and the Witch",
+      "description": "3D puzzle-platformer by 3AM Games Studio, selected for the ADVA MPVP mentorship program after a rework of its core mechanic.",
+      "startDate": "2024-04",
+      "url": "https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch",
+      "keywords": [
+        "Unity",
+        "C#",
+        "Editor tools",
+        "Cinemachine",
+        "uGUI"
+      ],
+      "roles": [
+        "Lead Unity Developer, 5-person team"
+      ],
+      "highlights": [
+        "Technical direction over 26 months in a 5-person team: core mechanics, camera, architecture, and 10 of the project's 14 custom editor tools."
       ]
     },
     {
@@ -278,10 +283,10 @@
         "Editor Windows"
       ],
       "roles": [
-        "Sole author"
+        "Solo developer"
       ],
       "highlights": [
-        "The Asset Renamer runs in SOLAR, a shipped commercial game."
+        "Asset Renamer: bulk renaming from a rule set the whole team shares."
       ]
     },
     {
@@ -296,7 +301,7 @@
         "Claude Code"
       ],
       "roles": [
-        "Programming, shared with Ignacio Martinez, 3-person team"
+        "3-day jam game; programming shared with Ignacio Martinez in a 3-person team"
       ],
       "highlights": [
         "Playable WebGL build on itch.io; decision system co-designed and balanced with Ignacio."
@@ -312,7 +317,7 @@
         "SQLite"
       ],
       "roles": [
-        "Sole author"
+        "Solo developer"
       ],
       "highlights": [
         "Running on Rollgeon's community server."
@@ -332,7 +337,7 @@
         "Solo developer, personal project"
       ],
       "highlights": [
-        "323 test cases that run green in 77 seconds, 17 architecture decisions, 54 endpoints."
+        "Runs with no cloud, switches between 4 model backends live, keeps RAG memory in SQLite and keeps working if the model is down."
       ]
     }
   ],

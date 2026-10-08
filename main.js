@@ -39,6 +39,60 @@ document.querySelectorAll('a.yt[data-yt]').forEach((link) => {
   });
 });
 
+// ---- Imágenes ampliables (lightbox con <dialog> nativo)
+// Sin JS, el link abre la imagen sola. Con JS se abre encima de la página;
+// Esc, el botón o un click en el fondo la cierran y el foco vuelve al link.
+const zooms = document.querySelectorAll('a.zoom');
+if (zooms.length && typeof HTMLDialogElement === 'function') {
+  const dlg = document.createElement('dialog');
+  dlg.className = 'lightbox';
+  dlg.setAttribute('aria-label', 'Enlarged image');
+  dlg.innerHTML = '<img alt=""><div class="lightbox__bar"><span class="lightbox__cap"></span><button type="button" class="lightbox__close">Close</button></div>';
+  document.body.appendChild(dlg);
+  const img = dlg.querySelector('img');
+  const cap = dlg.querySelector('.lightbox__cap');
+  let opener = null;
+  dlg.querySelector('.lightbox__close').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', () => { img.removeAttribute('src'); if (opener) opener.focus(); });
+  zooms.forEach((a) => {
+    a.addEventListener('click', (e) => {
+      if (e.ctrlKey || e.metaKey || e.shiftKey) return;
+      e.preventDefault();
+      opener = a;
+      const inner = a.querySelector('img');
+      img.src = a.getAttribute('href');
+      img.alt = inner ? inner.alt : a.textContent.trim();
+      cap.textContent = img.alt;
+      dlg.showModal();
+    });
+  });
+}
+
+// ---- Filtros de Projects
+// Sin JS la barra queda oculta y se ven todos los proyectos.
+const filters = document.querySelector('.filters');
+if (filters) {
+  const cards = [...document.querySelectorAll('.projects > [data-tags]')];
+  const status = document.getElementById('filter-status');
+  const tagsOf = (c) => c.dataset.tags.split(' ');
+  filters.querySelectorAll('button').forEach((b) => {
+    const f = b.dataset.filter;
+    b.querySelector('.count').textContent = f === 'all' ? cards.length : cards.filter((c) => tagsOf(c).includes(f)).length;
+    b.addEventListener('click', () => {
+      filters.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      let shown = 0;
+      cards.forEach((c) => {
+        const on = f === 'all' || tagsOf(c).includes(f);
+        c.hidden = !on;
+        if (on) shown += 1;
+      });
+      if (status) status.textContent = `Showing ${shown} project${shown === 1 ? '' : 's'}`;
+    });
+  });
+  filters.hidden = false;
+}
+
 // ---- Formulario de contacto (Web3Forms)
 const form = document.getElementById('contact-form');
 if (form) {
