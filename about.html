@@ -1,150 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About · Luca Valentini</title>
-  <meta name="description" content="Senior Unity Developer with 6+ years in Unity and C#, shipping games on mobile and PC since 2023. Experience, skills and background." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Senior Unity Developer and systems and tools programmer. Experience, education and skills.">
+  <link rel="canonical" href="https://lucavalentini25.github.io/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Luca Valentini">
+  <meta property="og:title" content="About · Luca Valentini">
+  <meta property="og:description" content="Senior Unity Developer and systems and tools programmer. Experience, education and skills.">
+  <meta property="og:url" content="https://lucavalentini25.github.io/about.html">
+  <meta property="og:image" content="https://lucavalentini25.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Luca Valentini, Senior Unity Developer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#e1d7c2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="text/markdown" href="llms.txt" title="Profile for LLMs (llms.txt)">
+  <link rel="alternate" type="application/json" href="profile.json" title="Profile as JSON Resume">
+  <!-- REVISAR: fuentes. Objetivo: alojarlas en assets/fonts/ (SIL OFL 1.1) para no contactar a Google.
+       Mientras eso no esté hecho, se cargan desde Google Fonts: no publicar así, porque la
+       política de privacidad dice que no hay recursos de terceros al cargar la página. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="analytics.js"></script>
+  <script defer src="main.js"></script>
 </head>
 <body>
-  <header class="nav" id="nav">
-    <a href="index.html" class="nav__logo">LV<span class="accent">.</span></a>
-    <nav class="nav__links">
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav__cta">Contact</a>
-    </nav>
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  <a class="skip" href="#main">Skip to content</a>
+  <nav class="files" aria-label="Pages as files">
+    <a href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M6 3h12l6 6v18H6z" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><path d="M10 14h10M10 18h10M10 22h6" stroke="#2f80fa" stroke-width="1.5"/></svg>home.md</a>
+    <a href="work.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 8h9l2 3h13v15H3z" fill="#f1a82c" stroke="#4d4f46" stroke-width="1.5"/></svg>work/</a>
+    <a href="projects.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 8h9l2 3h13v15H3z" fill="#6aa84f" stroke="#4d4f46" stroke-width="1.5"/></svg>projects/</a>
+    <a href="about.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M6 3h12l6 6v18H6z" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><circle cx="15" cy="15" r="3.5" fill="none" stroke="#f54e00" stroke-width="1.5"/><path d="M9 24c1-4 11-4 12 0" fill="none" stroke="#f54e00" stroke-width="1.5"/></svg>about.md</a>
+    <a href="contact.html"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="7" width="24" height="17" rx="2" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><path d="M4 9l11 8 11-8" fill="none" stroke="#4d4f46" stroke-width="1.5"/></svg>contact</a>
+  </nav>
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="index.html">Luca Valentini</a>
+      <nav class="nav__links" aria-label="Main"><a href="index.html">Home</a><a href="work.html">Work</a><a href="projects.html">Projects</a><a href="about.html">About</a><a class="nav__cta" href="contact.html">Contact</a></nav>
+    </div>
   </header>
 
+  <main id="main">
   <section class="pagehero">
-    <div class="pagehero__glow"></div>
     <div class="wrap">
-      <p class="pagehero__eyebrow">About</p>
-      <h1 class="pagehero__title">Senior Unity Developer, 6+ years in Unity and C#</h1>
-      <p class="pagehero__desc">Architecting gameplay systems, building the tools that make teams faster, and getting real performance out of the hardware players own.</p>
+      <div class="win">
+        <div class="tb">about.md</div>
+        <div class="win__body about__grid">
+          <div class="about__photo"><img src="assets/me.jpg" alt="Luca Valentini"></div>
+          <div class="about__text">
+            <span class="eyebrow">About</span>
+            <h1 class="pagehero__title">Systems and tools programmer.</h1>
+            <p>Senior Unity Developer with 6+ years in Unity and C#, building and shipping games across PC and mobile in studio teams since 2023. I work best architecting structured, self-contained game systems, and building the custom tooling that raises the whole team's productivity. Toolmaking is what I enjoy most.</p>
+            <p>From January 2025 to September 2026 I was at KYKUYO on SOLAR, a live geolocation/AR mobile game, where I owned the character dressing system, the camera-context architecture, the onboarding flow and the in-app purchase store. I also took the technical direction of SPCA × SOLAR, because I was the one carrying it through to delivery.</p>
+            <p>I lead the technical direction of <em>Waxy: The Wick and the Witch</em> at 3AM Games Studio, and I teach Artificial Intelligence and pathfinding at Escuela Da Vinci, where I graduated.</p>
+            <p>Most of my recent work is done with coding agents: a game jam entry, a multiplayer netcode project, and features on a live mobile title, all built with Claude Code. The architecture decisions and the quality bar stay with me.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main>
-    <!-- ABOUT -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section__head">
-          <span class="section__num">01</span>
-          <h2 class="section__title">Background</h2>
+  <section class="section">
+    <div class="wrap">
+      <div class="win">
+        <div class="tb">recommendation.md</div>
+        <div class="win__body">
+          <figure class="quote">
+            <blockquote><p>"Luca gets it done. That's the simplest way I can put it. He doesn't just build things, he ships them (published apps in both Android and iOS), and makes them his own along the way."</p></blockquote>
+            <figcaption><b>Carolina Urien</b>, CEO &amp; Co-Founder, KYKUYO</figcaption>
+          </figure>
         </div>
-        <div class="about">
-          <p>Senior Unity Developer with 6+ years in Unity and C#, building and shipping games across PC and mobile in studio teams since 2023. I work best as a <strong>systems and tools programmer</strong>: architecting structured, self-contained game systems rather than one-off gameplay, and building the custom tooling that raises the whole team's productivity.</p>
-          <p>Toolmaking is what I most enjoy — I actively look for ways to automate and simplify repetitive work, both inside Unity and outside it when the problem calls for it. I also publish my Unity tools as <a href="https://github.com/LucaValentini25/Unity-Tools" target="_blank" rel="noopener">open UPM packages</a>, and one of them runs in a shipped commercial game.</p>
-          <p>Currently I'm Senior Unity Developer at <strong>KYKUYO</strong>, working on <strong>SOLAR</strong>, a live geolocation/AR mobile game on Google Play and the App Store. There I own the character dressing system, the camera-context architecture, the onboarding flow and the in-app purchase store. I also took the technical direction of <strong>SPCA × SOLAR</strong>, a time-limited campaign game, as its lead programmer.</p>
-          <p>Alongside that I led the technical direction of <strong>Waxy: The Wick and the Witch</strong>, which won the ADVA MVP mentorship program and was rebuilt from the ground up into a market-ready title, where I led programming and built most of its custom editor tooling.</p>
-          <p>I also teach at <strong>Escuela Da Vinci</strong>, the university where I graduated — first as a teaching assistant helping students plan and architect the systems behind their thesis projects, and now as a professor of Artificial Intelligence and pathfinding algorithms.</p>
-          <p>Outside work I build to keep learning — most recently <strong>Brain App</strong>, a local-first AI assistant with a layered architecture and a suite of 323 test cases that runs green in 77 seconds, where the LLM only classifies intent while deterministic code does the work.</p>
-        </div>
-
-        <figure class="quote">
-          <blockquote>
-            <p>“Luca gets it done. That's the simplest way I can put it. … He doesn't just build things, he ships them (published apps in both Android and iOS), and makes them his own along the way.”</p>
-          </blockquote>
-          <figcaption class="quote__by"><strong>Carolina Urien</strong> — CEO &amp; Co-Founder, KYKUYO</figcaption>
-        </figure>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EXPERIENCE -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section__head">
-          <span class="section__num">02</span>
-          <h2 class="section__title">Experience</h2>
-        </div>
-        <div class="timeline">
+  <section class="section">
+    <div class="wrap">
+      <div class="win">
+        <div class="tb">experience.md</div>
+        <div class="win__body">
+          <header class="sec-head"><span class="eyebrow">Experience</span><h2>Where I've worked.</h2></header>
           <div class="tl">
-            <div class="tl__meta"><span class="tl__date">Jan 2025 – Present</span><span class="tl__mode">Remote</span></div>
-            <h3 class="tl__role">Senior Unity Developer <span class="tl__co">· KYKUYO</span></h3>
-            <ul>
-              <li>Work on <strong>SOLAR</strong>, a live geolocation mobile game on Google Play &amp; App Store — architecture, game systems and implementation.</li>
-              <li>Own the character <strong>dressing system</strong> end to end — a node-graph garment system with backend sync and its own authoring tools.</li>
-              <li>Designed the <strong>camera-context architecture</strong> and built the <strong>NPC GPU-rendering</strong> pipeline — 10&rarr;200 FPS on a full crowd.</li>
-              <li>Took the <strong>technical direction of the SPCA × SOLAR campaign game</strong> as lead programmer, delivered within a fixed window.</li>
-              <li>Built internal editor tooling used across the team: Addressables Folder Manager, the Solar Tools suite, a Mesh Instance Baker.</li>
-              <li>Made cross-team architecture decisions and acted as technical reference for the team.</li>
-            </ul>
-          </div>
-          <div class="tl">
-            <div class="tl__meta"><span class="tl__date">2025 – Present</span><span class="tl__mode">Teaching</span></div>
-            <h3 class="tl__role">Professor / Teaching Assistant <span class="tl__co">· Escuela Da Vinci</span></h3>
-            <ul>
-              <li>Professor (2026 – Present) — teaches <strong>Artificial Intelligence and pathfinding algorithms</strong>.</li>
-              <li>Teaching Assistant (2025) in <em>Programming for Thesis</em> — guided students on planning and architecting the systems behind their theses: how to think a design through before building.</li>
-            </ul>
-          </div>
-          <div class="tl">
-            <div class="tl__meta"><span class="tl__date">Jan 2023 – Present</span></div>
-            <h3 class="tl__role">Lead Unity Developer <span class="tl__co">· 3AM Games Studio</span></h3>
-            <ul>
-              <li>Led programming and technical direction of <em>Waxy: The Wick and the Witch</em> over 26 months in a 5-person team.</li>
-              <li>Built most of the project's <strong>custom editor tooling</strong>, including batch blockout-to-prefab conversion and localization tools.</li>
-              <li>Designed the wax and fire-state mechanics and the camera system; built the data-driven tuning pipeline on ScriptableObjects.</li>
-              <li>Rebuilt the game from scratch for the ADVA MVP program; owned technical architecture and scalability decisions.</li>
-              <li>Presented at industry expos and business rounds across Argentina.</li>
-            </ul>
-          </div>
-          <div class="tl">
-            <div class="tl__meta"><span class="tl__date">Sep 2023 – Dec 2024</span><span class="tl__mode">100% English</span></div>
-            <h3 class="tl__role">Technical Support Analyst &amp; Helpdesk <span class="tl__co">· Huawei</span></h3>
-            <ul>
-              <li>Handled 300–400 support tickets monthly against an under-18-hour response-time SLA.</li>
-              <li>Sustained a user satisfaction rating of 4.5/5 or higher — the team's required threshold.</li>
-              <li>Maintained backups and IT assets across 100+ devices.</li>
-            </ul>
+            <div class="tl__item"><div><span class="tl__when">01/2025 · 09/2026</span><h3>Senior Unity Developer</h3><span class="tl__where">KYKUYO · Remote</span></div><ul><li>Worked on SOLAR, a live free-to-play mobile game, across architecture, game systems and implementation.</li><li>Owned the character dressing system end-to-end, plus its 8 authoring tools.</li><li>Designed the camera context system and built the NPC GPU rendering pipeline: 10 → 200 fps on device.</li><li>Took the technical direction of SPCA × SOLAR across a 9-person team.</li><li>Wrote asset requirements for artists: what a garment model needed to fit the system, its animation states and its mobile budgets.</li></ul></div>
+            <div class="tl__item"><div><span class="tl__when">03/2025 · Present</span><h3>Professor / Teaching Assistant</h3><span class="tl__where">Escuela Da Vinci</span></div><ul><li>Professor of Artificial Intelligence and pathfinding algorithms (2026 to present).</li><li>Teaching Assistant in Programming for Thesis (2025): helped students plan and architect the systems behind their thesis projects.</li></ul></div>
+            <div class="tl__item"><div><span class="tl__when">01/2023 · Present</span><h3>Lead Unity Developer</h3><span class="tl__where">3AM Games Studio · indie project alongside full-time work</span></div><ul><li>Lead programming and technical direction of Waxy, over 26 months in a 5-person team.</li><li>Wrote 10 of the project's 14 custom editor tools.</li><li>Led a full rework of the core mechanic, which got the project into the ADVA MPVP program; own the architecture and scalability decisions.</li></ul></div>
+            <div class="tl__item"><div><span class="tl__when">09/2023 · 12/2024</span><h3>Technical Support Analyst</h3><span class="tl__where">Huawei Technologies · 100% in English</span></div><ul><li>Handled 300 to 400 support tickets a month against an under-18-hour SLA.</li><li>Kept a user satisfaction rating of 4.5/5 or higher.</li></ul></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section__head">
-          <span class="section__num">03</span>
-          <h2 class="section__title">Skills</h2>
-          <p class="section__desc">A <span class="accent">●</span> marks the areas I'm strongest in and reach for first.</p>
-        </div>
-        <div class="skills">
-          <div class="skillgroup"><h4>Tooling &amp; Automation · differentiator</h4><div class="chips"><span class="chip chip--x">Tool Making</span><span class="chip chip--x">Custom Editor Windows</span><span class="chip">Build/Pipeline Automation</span><span class="chip chip--x">UPM Package Authoring</span><span class="chip">Slack API bot</span><span class="chip">JSON Tooling</span></div></div>
-          <div class="skillgroup"><h4>Languages</h4><div class="chips"><span class="chip chip--x">C#</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">Python</span></div></div>
-          <div class="skillgroup"><h4>Systems &amp; Architecture</h4><div class="chips"><span class="chip chip--x">Game Systems</span><span class="chip">Data-Driven Design</span><span class="chip">ScriptableObjects</span><span class="chip">MVC</span><span class="chip">Event Systems</span><span class="chip">Optimization</span></div></div>
-          <div class="skillgroup"><h4>Unity Tools</h4><div class="chips"><span class="chip">Addressables</span><span class="chip">UI Toolkit</span><span class="chip">Cinemachine</span><span class="chip">Jobs System</span><span class="chip">Burst</span><span class="chip">JSON Serialization</span></div></div>
-          <div class="skillgroup"><h4>Performance</h4><div class="chips"><span class="chip">CPU/GPU/RAM Profiling</span><span class="chip">Memory Optimization</span><span class="chip">Render Pipeline</span><span class="chip">Multi-platform Builds</span></div></div>
-          <div class="skillgroup"><h4>AI-Assisted Dev</h4><div class="chips"><span class="chip chip--x">Claude Code — full workflow</span><span class="chip">MCP + Unity</span><span class="chip">Local LLMs (Ollama)</span><span class="chip">FastAPI</span></div></div>
-          <div class="skillgroup"><h4>Teaching</h4><div class="chips"><span class="chip">Professor — AI &amp; Pathfinding</span><span class="chip">Systems Planning &amp; Architecture</span></div></div>
-          <div class="skillgroup"><h4>Spoken languages</h4><div class="chips"><span class="chip">Spanish — Native</span><span class="chip">English — Advanced (FCE)</span></div></div>
+  <section class="section">
+    <div class="wrap">
+      <div class="win">
+        <div class="tb">education.md</div>
+        <div class="win__body">
+          <header class="sec-head"><span class="eyebrow">Education</span><h2>Where I studied.</h2></header>
+          <div class="tl">
+            <div class="tl__item"><div><span class="tl__when">01/2022 · 12/2024</span><h3>Video Game Development Technician</h3><span class="tl__where">Escuela Da Vinci · Buenos Aires</span></div><ul><li>Graduated December 2024. Now teaching there.</li></ul></div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cta">
-      <div class="wrap">
-        <h2 class="cta__title">Let's build something.</h2>
-        <p class="cta__lead">Open to Senior Unity Developer roles — remote, worldwide.</p>
-        <a href="contact.html" class="btn btn--primary">Get in touch</a>
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="win">
+        <div class="tb">skills.json</div>
+        <div class="win__body">
+          <header class="sec-head"><span class="eyebrow">Skills</span><h2>What I work with.</h2></header>
+          <div class="skills">
+            <div class="skillgroup"><h3>Tooling &amp; automation</h3><ul class="chips"><li>Custom Editor Windows</li><li>UPM packages</li><li>Build automation</li><li>Code generation</li><li>Slack API</li><li>Discord bots</li></ul></div>
+            <div class="skillgroup"><h3>Engine</h3><ul class="chips"><li>Unity</li><li>URP</li><li>Addressables</li><li>UI Toolkit</li><li>uGUI</li><li>Cinemachine</li><li>Jobs System</li><li>Burst</li></ul></div>
+            <div class="skillgroup"><h3>Systems &amp; architecture</h3><ul class="chips"><li>Game systems</li><li>Data-driven design</li><li>ScriptableObjects</li><li>Assembly Definitions</li><li>Event systems</li><li>MVC</li></ul></div>
+            <div class="skillgroup"><h3>Performance</h3><ul class="chips"><li>Unity Profiler</li><li>Frame Debugger</li><li>Memory Profiler</li><li>GPU skinning</li><li>GPU instancing</li><li>HLSL (skinning shader)</li><li>Android / iOS / PC builds</li></ul></div>
+            <div class="skillgroup"><h3>Multiplayer</h3><ul class="chips"><li>Netcode for GameObjects</li><li>Unity Transport</li><li>Relay / Lobby</li><li>Client-side prediction</li><li>Server reconciliation</li><li>Snapshot interpolation</li></ul></div>
+            <div class="skillgroup"><h3>AI-assisted development</h3><ul class="chips"><li>Claude Code</li><li>Codex</li><li>Unity MCP</li><li>Agent skills</li><li>Local LLMs (Ollama)</li></ul></div>
+            <div class="skillgroup"><h3>Languages</h3><ul class="chips"><li>C#</li><li>C++</li><li>TypeScript</li><li>Python</li><li>SQL</li></ul></div>
+            <div class="skillgroup"><h3>Spoken</h3><ul class="chips"><li>Spanish, native</li><li>English, fluent (FCE)</li></ul></div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
   </main>
 
-  <footer class="footer wrap">
-    <span>© <span id="year"></span> Luca Valentini</span>
-    <span>Built from a single source of truth · Buenos Aires</span>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>&copy; <span id="year">2026</span> Luca Valentini</span>
+      <nav class="footer__links" aria-label="Legal and data">
+        <a href="privacy.html" hreflang="es">Privacy</a>
+        <a href="llms.txt">llms.txt</a>
+        <a href="profile.json">profile.json</a>
+        <a href="https://github.com/LucaValentini25">GitHub</a>
+        <a href="https://www.linkedin.com/in/lucavalentinidev">LinkedIn</a>
+      </nav>
+    </div>
   </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>

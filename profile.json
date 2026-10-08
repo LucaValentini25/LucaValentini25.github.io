@@ -1,0 +1,344 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Luca Valentini",
+    "label": "Senior Unity Developer, Systems & Tools Programmer",
+    "image": "https://lucavalentini25.github.io/assets/me.jpg",
+    "email": "lucavalentini25@gmail.com",
+    "url": "https://lucavalentini25.github.io",
+    "summary": "Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build structured, self-contained game systems and the custom editor tooling that makes the whole team faster, backed by measured performance work on mobile.",
+    "location": {
+      "city": "Buenos Aires",
+      "countryCode": "AR",
+      "region": "Buenos Aires"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "lucavalentinidev",
+        "url": "https://www.linkedin.com/in/lucavalentinidev"
+      },
+      {
+        "network": "GitHub",
+        "username": "LucaValentini25",
+        "url": "https://github.com/LucaValentini25"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "KYKUYO",
+      "position": "Senior Unity Developer",
+      "startDate": "2025-01",
+      "endDate": "2026-09",
+      "summary": "Worked on SOLAR, a live free-to-play geolocation/AR mobile game on Google Play and the App Store.",
+      "highlights": [
+        "Owned the character dressing system end-to-end: a node-graph garment system with backend sync and 8 authoring tools.",
+        "Built the NPC GPU rendering pipeline: 10 to 200 fps measured on device with a full NPC crowd.",
+        "Designed the camera context system, with the layer boundary enforced by the compiler.",
+        "Took the technical direction of SPCA x SOLAR across a 9-person team.",
+        "Shipped the onboarding flow, the in-app purchase store and the HUD.",
+        "Built internal editor tooling used across the team: 9 of the project's 35 custom editor tools."
+      ]
+    },
+    {
+      "name": "Escuela Da Vinci",
+      "position": "Professor / Teaching Assistant",
+      "startDate": "2025-03",
+      "summary": "Professor of Artificial Intelligence and pathfinding algorithms (2026 to present). Teaching Assistant in Programming for Thesis (2025).",
+      "highlights": [
+        "Teaches Artificial Intelligence and pathfinding algorithms.",
+        "Helped students plan and architect the systems behind their thesis projects."
+      ]
+    },
+    {
+      "name": "3AM Games Studio",
+      "position": "Lead Unity Developer",
+      "startDate": "2023-01",
+      "summary": "Indie project alongside full-time work. Technical direction of Waxy: The Wick and the Witch, over 26 months in a 5-person team.",
+      "highlights": [
+        "Wrote 10 of the project's 14 custom editor tools.",
+        "Led a full rework of the core mechanic, which got the project selected for the ADVA MPVP mentorship program.",
+        "Designed the wax and fire-state mechanics and the camera system."
+      ]
+    },
+    {
+      "name": "Huawei Technologies",
+      "position": "Technical Support Analyst & Helpdesk",
+      "startDate": "2023-09",
+      "endDate": "2024-12",
+      "highlights": [
+        "Handled 300 to 400 support tickets a month against an under-18-hour response-time SLA.",
+        "Kept a user satisfaction rating of 4.5/5 or higher."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Escuela Da Vinci",
+      "area": "Video Game Development",
+      "studyType": "Technician degree",
+      "startDate": "2022-01",
+      "endDate": "2024-12"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Tooling & automation",
+      "keywords": [
+        "Custom Editor Windows",
+        "UPM packages",
+        "Build automation",
+        "Code generation",
+        "Slack API",
+        "Discord bots"
+      ]
+    },
+    {
+      "name": "Engine",
+      "keywords": [
+        "Unity",
+        "URP",
+        "Addressables",
+        "UI Toolkit",
+        "uGUI",
+        "Cinemachine",
+        "Jobs System",
+        "Burst"
+      ]
+    },
+    {
+      "name": "Systems & architecture",
+      "keywords": [
+        "Game systems",
+        "Data-driven design",
+        "ScriptableObjects",
+        "Assembly Definitions",
+        "Event systems",
+        "MVC"
+      ]
+    },
+    {
+      "name": "Performance",
+      "keywords": [
+        "Unity Profiler",
+        "Frame Debugger",
+        "Memory Profiler",
+        "GPU skinning",
+        "GPU instancing",
+        "HLSL",
+        "Android / iOS / PC builds"
+      ]
+    },
+    {
+      "name": "Multiplayer",
+      "keywords": [
+        "Netcode for GameObjects",
+        "Unity Transport",
+        "Relay / Lobby",
+        "Client-side prediction",
+        "Server reconciliation",
+        "Snapshot interpolation"
+      ]
+    },
+    {
+      "name": "AI-assisted development",
+      "keywords": [
+        "Claude Code",
+        "Codex",
+        "Unity MCP",
+        "Agent skills",
+        "Local LLMs (Ollama)"
+      ]
+    },
+    {
+      "name": "Languages",
+      "keywords": [
+        "C#",
+        "C++",
+        "TypeScript",
+        "Python",
+        "SQL"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent (FCE)"
+    }
+  ],
+  "projects": [
+    {
+      "name": "SOLAR",
+      "description": "Live free-to-play geolocation/AR mobile game.",
+      "startDate": "2025-01",
+      "endDate": "2026-09",
+      "url": "https://play.google.com/store/apps/details?id=com.kykuyo.solar",
+      "keywords": [
+        "Unity",
+        "C#",
+        "URP",
+        "Addressables",
+        "UI Toolkit",
+        "Jobs System",
+        "Burst"
+      ],
+      "roles": [
+        "Senior Unity Developer at KYKUYO"
+      ],
+      "highlights": [
+        "Owned the dressing system, the camera-context architecture and the NPC GPU rendering pipeline (10 to 200 fps on device)."
+      ]
+    },
+    {
+      "name": "Waxy: The Wick and the Witch",
+      "description": "3D puzzle-platformer by 3AM Games Studio. Wax is your health, your height as you melt, and the reach of your flame. Fully playable on a gamepad, menus included.",
+      "startDate": "2024-04",
+      "url": "https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch",
+      "keywords": [
+        "Unity",
+        "C#",
+        "Editor tools",
+        "Cinemachine",
+        "uGUI"
+      ],
+      "roles": [
+        "Lead Unity Developer, 5-person team"
+      ],
+      "highlights": [
+        "Led the rework of the core mechanic that got the project selected for the ADVA MPVP mentorship program; wrote 10 of its 14 custom editor tools."
+      ]
+    },
+    {
+      "name": "Snackdown",
+      "description": "2D last-player-standing multiplayer platformer, server-authoritative, with hand-written client-side prediction, server reconciliation and snapshot interpolation. Built with Claude Code.",
+      "url": "https://github.com/LucaValentini25/Snackdown",
+      "keywords": [
+        "Unity 6",
+        "C#",
+        "Netcode for GameObjects",
+        "Unity Transport",
+        "Relay",
+        "Lobby"
+      ],
+      "roles": [
+        "Sole author"
+      ],
+      "highlights": [
+        "Measured 0.302 units median prediction error at 20% packet loss, and 2 corrections in 79 seconds on a home network. Up to 4 players, host over Unity Relay."
+      ]
+    },
+    {
+      "name": "Rollgeon",
+      "description": "Roguelike dice builder where your deck is a bag of dice and combat is based on Generala. In development.",
+      "url": "https://3amgamesstudio.itch.io/rollgeon",
+      "keywords": [
+        "Unity",
+        "Mobile port",
+        "Input System",
+        "Gamepad"
+      ],
+      "roles": [
+        "Mobile port and gamepad support, in collaboration with members of 3AM Games"
+      ],
+      "highlights": [
+        "Porting the game to mobile and adding controller support."
+      ]
+    },
+    {
+      "name": "SPCA x SOLAR",
+      "description": "Time-limited cat-rescue campaign game with SPCA, an animal rescue in Singapore. The campaign has ended.",
+      "startDate": "2025-06",
+      "endDate": "2025-11",
+      "keywords": [
+        "Unity",
+        "C#",
+        "Mobile",
+        "Addressables"
+      ],
+      "roles": [
+        "Technical direction, 9-person team"
+      ],
+      "highlights": [
+        "Delivered within a fixed campaign window, with a mock layer so the game never waited on the backend."
+      ]
+    },
+    {
+      "name": "Unity Tools",
+      "description": "Five Unity editor tools published as UPM packages: Asset Renamer, PlayerPrefs Manager, Prefab Replacer, Project Zipper and Rename Items.",
+      "url": "https://github.com/LucaValentini25/Unity-Tools",
+      "keywords": [
+        "C#",
+        "UPM",
+        "Editor Windows"
+      ],
+      "roles": [
+        "Sole author"
+      ],
+      "highlights": [
+        "The Asset Renamer runs in SOLAR, a shipped commercial game."
+      ]
+    },
+    {
+      "name": "You Can't Always Push the Red Button",
+      "description": "Decision-making game for the Unity BA Game Jam 2026: you rule a cat nation and try not to just push the button. Made with Claude Code in 3 days.",
+      "startDate": "2026",
+      "url": "https://zathmell.itch.io/you-cant-always-push-the-red-button",
+      "keywords": [
+        "Unity",
+        "C#",
+        "WebGL",
+        "Claude Code"
+      ],
+      "roles": [
+        "Programming, shared with Ignacio Martinez, 3-person team"
+      ],
+      "highlights": [
+        "Playable WebGL build on itch.io; decision system co-designed and balanced with Ignacio."
+      ]
+    },
+    {
+      "name": "Indie Community Bot",
+      "description": "Reusable Discord bot for indie game communities: welcome cards, devlogs, build notifications from CI and bug reports as private threads. All settings live per server in the database.",
+      "url": "https://github.com/LucaValentini25/indie-community-bot",
+      "keywords": [
+        "TypeScript",
+        "discord.js",
+        "SQLite"
+      ],
+      "roles": [
+        "Sole author"
+      ],
+      "highlights": [
+        "Running on Rollgeon's community server."
+      ]
+    },
+    {
+      "name": "Brain App",
+      "description": "Local-first AI assistant where the LLM never decides an action: it classifies intent, and deterministic code does the work. Private repository.",
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "SQLite",
+        "Vue 3",
+        "Ollama"
+      ],
+      "roles": [
+        "Solo developer, personal project"
+      ],
+      "highlights": [
+        "323 test cases that run green in 77 seconds, 17 architecture decisions, 54 endpoints."
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://lucavalentini25.github.io/profile.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-10-08"
+  }
+}

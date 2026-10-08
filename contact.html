@@ -1,51 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact · Luca Valentini</title>
-  <meta name="description" content="Get in touch with Luca Valentini — Senior Unity Developer, open to roles remote, worldwide." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Available now for Senior Unity Developer roles, remote, worldwide. Send a proposal or an email.">
+  <link rel="canonical" href="https://lucavalentini25.github.io/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Luca Valentini">
+  <meta property="og:title" content="Contact · Luca Valentini">
+  <meta property="og:description" content="Available now for Senior Unity Developer roles, remote, worldwide. Send a proposal or an email.">
+  <meta property="og:url" content="https://lucavalentini25.github.io/contact.html">
+  <meta property="og:image" content="https://lucavalentini25.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Luca Valentini, Senior Unity Developer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#e1d7c2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="text/markdown" href="llms.txt" title="Profile for LLMs (llms.txt)">
+  <link rel="alternate" type="application/json" href="profile.json" title="Profile as JSON Resume">
+  <!-- REVISAR: fuentes. Objetivo: alojarlas en assets/fonts/ (SIL OFL 1.1) para no contactar a Google.
+       Mientras eso no esté hecho, se cargan desde Google Fonts: no publicar así, porque la
+       política de privacidad dice que no hay recursos de terceros al cargar la página. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="analytics.js"></script>
+  <script defer src="main.js"></script>
 </head>
 <body>
-  <header class="nav" id="nav">
-    <a href="index.html" class="nav__logo">LV<span class="accent">.</span></a>
-    <nav class="nav__links">
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav__cta">Contact</a>
-    </nav>
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  <a class="skip" href="#main">Skip to content</a>
+  <nav class="files" aria-label="Pages as files">
+    <a href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M6 3h12l6 6v18H6z" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><path d="M10 14h10M10 18h10M10 22h6" stroke="#2f80fa" stroke-width="1.5"/></svg>home.md</a>
+    <a href="work.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 8h9l2 3h13v15H3z" fill="#f1a82c" stroke="#4d4f46" stroke-width="1.5"/></svg>work/</a>
+    <a href="projects.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 8h9l2 3h13v15H3z" fill="#6aa84f" stroke="#4d4f46" stroke-width="1.5"/></svg>projects/</a>
+    <a href="about.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M6 3h12l6 6v18H6z" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><circle cx="15" cy="15" r="3.5" fill="none" stroke="#f54e00" stroke-width="1.5"/><path d="M9 24c1-4 11-4 12 0" fill="none" stroke="#f54e00" stroke-width="1.5"/></svg>about.md</a>
+    <a href="contact.html"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="7" width="24" height="17" rx="2" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><path d="M4 9l11 8 11-8" fill="none" stroke="#4d4f46" stroke-width="1.5"/></svg>contact</a>
+  </nav>
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="index.html">Luca Valentini</a>
+      <nav class="nav__links" aria-label="Main"><a href="index.html">Home</a><a href="work.html">Work</a><a href="projects.html">Projects</a><a href="about.html">About</a><a class="nav__cta" href="contact.html">Contact</a></nav>
+    </div>
   </header>
 
-  <main>
-    <section class="pagehero" style="border-bottom:none;">
-      <div class="pagehero__glow"></div>
-      <div class="wrap">
-        <div class="contact">
-          <span class="section__num">Contact</span>
-          <h1 class="contact__title">Let's build something.</h1>
-          <p class="contact__lead">Open to Senior Unity Developer roles — remote, worldwide. Especially projects that need a solid technical core: system architecture, custom tooling, and performance.</p>
-          <a class="contact__email" href="mailto:lucavalentini25@gmail.com">lucavalentini25@gmail.com</a>
-          <div class="contact__links">
-            <a href="https://www.linkedin.com/in/lucavalentinidev" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/LucaValentini25" target="_blank" rel="noopener">GitHub</a>
+  <main id="main">
+  <section class="pagehero contact">
+    <div class="wrap">
+      <div class="win">
+        <div class="tb">contact</div>
+        <div class="win__body contact__grid">
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h1 class="pagehero__title">Let's talk.</h1>
+            <p class="pagehero__lead">I'm available now for Senior Unity Developer roles, remote, worldwide. Send a proposal with the form below, or email me directly.</p>
+            <!-- REVISAR: email público de contacto -->
+            <a class="contact__mail" href="mailto:lucavalentini25@gmail.com">lucavalentini25@gmail.com</a>
+          </div>
+          <div class="contact__list">
+            <a href="mailto:lucavalentini25@gmail.com"><span>Email</span><span>lucavalentini25@gmail.com →</span></a>
+            <a href="https://www.linkedin.com/in/lucavalentinidev"><span>LinkedIn</span><span>/in/lucavalentinidev ↗</span></a>
+            <a href="https://github.com/LucaValentini25"><span>GitHub</span><span>LucaValentini25 ↗</span></a>
+            <a href="https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch"><span>Play Waxy</span><span>itch.io ↗</span></a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="form-title">
+    <div class="wrap">
+      <div class="win">
+        <div class="tb">new-proposal.txt</div>
+        <div class="win__body">
+          <header class="sec-head"><span class="eyebrow">Proposal</span><h2 id="form-title">Send me a proposal</h2><p>A role, a contract or a collaboration.</p></header>
+          <!-- Formulario sin backend propio: lo entrega Web3Forms (https://web3forms.com) a mi casilla.
+               Sin JS se envía igual (POST normal y Web3Forms muestra su página de confirmación).
+               Con JS, main.js lo envía por fetch y muestra los estados en #form-status. -->
+          <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <!-- COMPLETAR: access key de Web3Forms. Se pide en web3forms.com con el email donde querés recibir
+                 los mensajes (lucavalentini25@gmail.com) y llega por mail. Es pública por diseño: solo sirve para
+                 enviarte mensajes a vos, no para leerlos. -->
+            <input type="hidden" name="access_key" value="REEMPLAZAR-WEB3FORMS-ACCESS-KEY">
+            <input type="hidden" name="subject" value="New proposal from lucavalentini25.github.io">
+            <input type="hidden" name="from_name" value="Portfolio contact form">
+            <!-- Honeypot anti-spam: invisible para personas; si un bot lo marca, Web3Forms descarta el envío. -->
+            <div class="hp" aria-hidden="true"><label for="f-botcheck">Leave this box unchecked</label><input type="checkbox" name="botcheck" id="f-botcheck" tabindex="-1" autocomplete="off"></div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="f-name-err">
+                <p class="field__error" id="f-name-err"></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="f-email-err">
+                <p class="field__error" id="f-email-err"></p>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-company">Company <span class="opt">(optional)</span></label>
+                <input id="f-company" name="company" type="text" autocomplete="organization" maxlength="120">
+              </div>
+              <div class="field">
+                <label for="f-type">Type of proposal</label>
+                <select id="f-type" name="proposal_type" required aria-describedby="f-type-err">
+                  <option value="">Choose one</option>
+                  <option>Full-time role</option>
+                  <option>Contract or freelance</option>
+                  <option>Collaboration</option>
+                  <option>Something else</option>
+                </select>
+                <p class="field__error" id="f-type-err"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message" required minlength="20" maxlength="5000" aria-describedby="f-message-hint f-message-err"></textarea>
+              <p class="field__error" id="f-message-err"></p>
+              <p class="sr-only" id="f-message-hint">At least 20 characters.</p>
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--primary" type="submit">Send proposal</button>
+              <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+            <p class="form__privacy">I use these details only to reply to your message. They're delivered to my inbox through Web3Forms and aren't added to any list. <a href="privacy.html" hreflang="es">Privacy policy (in Spanish)</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   </main>
 
-  <footer class="footer wrap">
-    <span>© <span id="year"></span> Luca Valentini</span>
-    <span>Built from a single source of truth · Buenos Aires</span>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>&copy; <span id="year">2026</span> Luca Valentini</span>
+      <nav class="footer__links" aria-label="Legal and data">
+        <a href="privacy.html" hreflang="es">Privacy</a>
+        <a href="llms.txt">llms.txt</a>
+        <a href="profile.json">profile.json</a>
+        <a href="https://github.com/LucaValentini25">GitHub</a>
+        <a href="https://www.linkedin.com/in/lucavalentinidev">LinkedIn</a>
+      </nav>
+    </div>
   </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>

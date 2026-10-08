@@ -1,74 +1,29 @@
-# Luca Valentini — Portfolio
+# lucavalentini25.github.io
 
-**🟢 LIVE: https://lucavalentini25.github.io** (GitHub Pages, repo `LucaValentini25.github.io`, desde 2026-07-27).
-Este es el link público que se comparte con reclutadores. Cambios: editar el `.md` fuente → sincronizar → push al repo.
+Portfolio personal de Luca Valentini, sitio 100% estático en GitHub Pages. Sin build obligatorio, sin dependencias, sin cookies.
 
-Static portfolio site (HTML/CSS/JS, no build step). Content is derived from a single
-source of truth: **`../Datos Portfolio Web.md`**.
+## Estructura
 
-## Golden rule
+| Archivo | Qué es |
+|---|---|
+| `index.html` · `work.html` · `projects.html` · `about.html` · `contact.html` | Páginas, en inglés |
+| `privacy.html` | Política de privacidad, en español |
+| `styles.css` · `main.js` | Estilo "escritorio" y JS opcional (año, link activo, YouTube diferido, formulario) |
+| `analytics.js` | Umami Cloud, sin cookies. **Completar el Website ID** |
+| `data.json` | **Fuente única** de los archivos para máquinas. Se deriva de `Portfolio/Datos Portfolio Web.md` del workspace |
+| `llms.txt` · `llms-full.txt` · `profile.json` · `sitemap.xml` | **Generados** por `tools/build.py`: no editarlos a mano |
+| `robots.txt` | Permite todos los crawlers, incluidos los de IA |
+| `tools/build.py` | Regenera los archivos de datos y el JSON-LD de `index.html` |
+| `tools/og.html` | Plantilla de `assets/og.png` (imagen para redes) |
 
-Edit content in **`Datos Portfolio Web.md`** first, then sync it into `index.html`.
-Never hand-edit the site without reflecting the change in the `.md` — otherwise drift returns.
-(Run `/portfolio-site` in `sync` mode to re-sync.)
+## Al cambiar contenido
 
-## Files
+1. Cambiar primero `Datos Portfolio Web.md` (workspace), después el HTML y `data.json`.
+2. `python tools/build.py` y commitear los archivos generados junto con el cambio.
 
-Multi-page static site — shared `styles.css` + `main.js` across all pages.
+## Placeholders que hay que completar (buscar `REEMPLAZAR` y `COMPLETAR`)
 
-| File | Purpose |
-|------|---------|
-| `index.html` | Home — hero, what I do, selected work, CTA |
-| `work.html` | Tools & Solutions — detailed case studies with media |
-| `projects.html` | Projects — KYKUYO, Waxy, Brain App with media |
-| `about.html` | About + Experience timeline + Skills |
-| `contact.html` | Contact |
-| `styles.css` | Dark game-dev theme, responsive |
-| `main.js` | Nav (active state), mobile menu, scroll-reveal, media fallback |
-| `assets/` | Images & videos — see `assets/README.md` for filenames |
-| `.nojekyll` | Tells GitHub Pages to serve files as-is |
-
-## Media
-
-Case studies and projects reference images/videos in `assets/work/` and `assets/projects/`.
-Until a file exists, the site shows a labeled placeholder — so it looks intentional even empty.
-See **`assets/README.md`** for the exact filenames to drop in.
-
-## Preview locally
-
-Just open `index.html` in a browser, or:
-
-```bash
-# from this folder
-python -m http.server 8000
-# → http://localhost:8000
-```
-
-## Deploy to GitHub Pages
-
-> ✅ **Ya desplegado con la Opción A.** Los pasos de abajo quedan como referencia / para redeploy.
-> Para publicar cambios: commit + push a `main` en el repo `LucaValentini25.github.io`; Pages actualiza en ~1 min.
-
-**Option A — dedicated user site (recommended, gives `lucavalentini25.github.io`):**
-
-1. Create a public repo named exactly `LucaValentini25.github.io`.
-2. Push the **contents of this `site/` folder** to the repo root (not the `site/` folder itself):
-   ```bash
-   cd "Portfolio/site"
-   git init
-   git add .
-   git commit -m "Portfolio site"
-   git branch -M main
-   git remote add origin https://github.com/LucaValentini25/LucaValentini25.github.io.git
-   git push -u origin main
-   ```
-3. In the repo: **Settings → Pages → Source: Deploy from branch → `main` / root**.
-4. Live at **https://lucavalentini25.github.io** in ~1 minute.
-
-**Option B — project site under an existing repo:**
-Put these files in a `/docs` folder (or a `gh-pages` branch) and point Settings → Pages there.
-URL will be `https://lucavalentini25.github.io/<repo-name>/`.
-
-## Custom domain (optional)
-
-Add a `CNAME` file with your domain and configure DNS. Then update the domain in Pages settings.
+- `analytics.js`: Website ID de Umami.
+- `contact.html`: access key de Web3Forms.
+- `projects.html`: trailer de Rollgeon.
+- Fuentes: pasar de Google Fonts a `assets/fonts/` (ver el comentario `REVISAR` en el `<head>`).

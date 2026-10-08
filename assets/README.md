@@ -12,7 +12,6 @@ Recomendado: imágenes **1600×900** o más (16:9), PNG/JPG/WebP · videos **MP4
 
 | Archivo | Qué muestra | Caso |
 |---|---|---|
-| `waxy-jump-preview.png` | Jump Preview Tool con el mesh de alcance visible en el Scene View | `#waxy-editor` |
 | `waxy-blockout.png` | Blockout de ProBuilder convertido a prefabs finales | `#waxy-editor` |
 | `npc-gpu.png` | Multitud de NPCs renderizada con GPU skinning | `#npc-gpu` |
 | `npc-gpu.mp4` | Gameplay con NPCs corriendo en un dispositivo | `#npc-gpu` |

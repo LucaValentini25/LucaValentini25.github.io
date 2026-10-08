@@ -1,202 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work — Tools &amp; Solutions · Luca Valentini</title>
-  <meta name="description" content="Case studies from shipped games: the problem, the approach, how it works, the tools, and what I built." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case studies · Luca Valentini</title>
+  <meta name="description" content="Seven real problems from shipped games and open-source work: the problem, the approach, how it works, and what I built.">
+  <link rel="canonical" href="https://lucavalentini25.github.io/work.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Luca Valentini">
+  <meta property="og:title" content="Case studies · Luca Valentini">
+  <meta property="og:description" content="Seven real problems from shipped games and open-source work: the problem, the approach, how it works, and what I built.">
+  <meta property="og:url" content="https://lucavalentini25.github.io/work.html">
+  <meta property="og:image" content="https://lucavalentini25.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Luca Valentini, Senior Unity Developer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#e1d7c2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="text/markdown" href="llms.txt" title="Profile for LLMs (llms.txt)">
+  <link rel="alternate" type="application/json" href="profile.json" title="Profile as JSON Resume">
+  <!-- REVISAR: fuentes. Objetivo: alojarlas en assets/fonts/ (SIL OFL 1.1) para no contactar a Google.
+       Mientras eso no esté hecho, se cargan desde Google Fonts: no publicar así, porque la
+       política de privacidad dice que no hay recursos de terceros al cargar la página. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="analytics.js"></script>
+  <script defer src="main.js"></script>
 </head>
 <body>
-  <header class="nav" id="nav">
-    <a href="index.html" class="nav__logo">LV<span class="accent">.</span></a>
-    <nav class="nav__links">
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav__cta">Contact</a>
-    </nav>
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  <a class="skip" href="#main">Skip to content</a>
+  <nav class="files" aria-label="Pages as files">
+    <a href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M6 3h12l6 6v18H6z" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><path d="M10 14h10M10 18h10M10 22h6" stroke="#2f80fa" stroke-width="1.5"/></svg>home.md</a>
+    <a href="work.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 8h9l2 3h13v15H3z" fill="#f1a82c" stroke="#4d4f46" stroke-width="1.5"/></svg>work/</a>
+    <a href="projects.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 8h9l2 3h13v15H3z" fill="#6aa84f" stroke="#4d4f46" stroke-width="1.5"/></svg>projects/</a>
+    <a href="about.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M6 3h12l6 6v18H6z" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><circle cx="15" cy="15" r="3.5" fill="none" stroke="#f54e00" stroke-width="1.5"/><path d="M9 24c1-4 11-4 12 0" fill="none" stroke="#f54e00" stroke-width="1.5"/></svg>about.md</a>
+    <a href="contact.html"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="7" width="24" height="17" rx="2" fill="#fff" stroke="#4d4f46" stroke-width="1.5"/><path d="M4 9l11 8 11-8" fill="none" stroke="#4d4f46" stroke-width="1.5"/></svg>contact</a>
+  </nav>
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="index.html">Luca Valentini</a>
+      <nav class="nav__links" aria-label="Main"><a href="index.html">Home</a><a href="work.html">Work</a><a href="projects.html">Projects</a><a href="about.html">About</a><a class="nav__cta" href="contact.html">Contact</a></nav>
+    </div>
   </header>
 
+  <main id="main">
   <section class="pagehero">
-    <div class="pagehero__glow"></div>
     <div class="wrap">
-      <p class="pagehero__eyebrow">Tools &amp; Solutions</p>
-      <h1 class="pagehero__title">How I solve problems</h1>
-      <p class="pagehero__desc">Real situations from shipped games. Each case follows the same shape — the problem, the approach, how it actually works, the tools, and what I built.</p>
+      <div class="win">
+        <div class="tb">work/README.md</div>
+        <div class="win__body">
+          <span class="eyebrow">Tools &amp; solutions</span>
+          <h1 class="pagehero__title">How I solve problems.</h1>
+          <p class="pagehero__lead">Seven real problems from shipped games, open-source work and prototypes. Each one: the problem, the approach, how it works, and what I built.</p>
+          <nav class="toc"><a href="#waxy-tools">Level-building tools</a><a href="#npc-gpu">NPC crowd on the GPU</a><a href="#kykuyo-tooling">Internal tooling</a><a href="#dressing">Dressing system</a><a href="#camera">Camera contexts</a><a href="#external">External tooling</a><a href="#snackdown">Multiplayer netcode</a></nav>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main>
-    <section class="section">
-      <div class="wrap">
-        <div class="cases">
+  <section class="section cases">
+    <div class="wrap">
 
-          <!-- CASE: NPC GPU RENDERING -->
-          <article class="case" id="npc-gpu">
-            <div class="case__body">
-              <span class="case__tag">SOLAR &middot; Performance</span>
-              <h2 class="case__title">From 10 to 200 FPS with a crowd of NPCs on screen</h2>
-              <div class="case__block">
-                <span class="case__label">Problem</span>
-                <p>A living city needs crowds of NPCs, each dressed from the same system as the player. With a standard Animator and skinned mesh per character, a thousand of them dropped the game to ~10 FPS (96 ms/frame) &mdash; unplayable, and far worse on a real phone.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">Approach</span>
-                <p>I moved NPC animation and rendering onto the GPU. Animation is baked into a texture at edit time, skinning runs in the shader instead of on the CPU, and the crowd is batched by mesh so the same garment on different characters draws together.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">How it works</span>
-                <p>A custom baker turns each clip into a vertex-animation texture that the shader samples per frame &mdash; no Animator, no <code>SkinnedMeshRenderer</code>. A Burst-compiled job feeds the GPU, keeping it off the main thread. The two NPCs in the video are identical to the eye: one on a classic Animator, one fully on the GPU.</p>
-              </div>
-              <div class="case__tools"><span>GPU Skinning</span><span>Vertex Animation Textures</span><span>Custom Baker</span><span>Jobs System</span><span>Burst</span></div>
-              <div class="case__impact">Same 1,000-NPC scene: <strong>10 FPS &rarr; 215 FPS</strong>, and CPU frame time from <strong>96 ms down to 4.7 ms</strong>. Zero Animator components, zero skinned meshes.</div>
-            </div>
-            <div class="case__media">
-              <figure class="media"><div class="media__frame" data-label="Before &mdash; Animator, 10 FPS" data-file="assets/work/npc-before.png"><img src="assets/work/npc-before.png" alt="1000 NPCs on standard Animators running at 10 FPS" loading="lazy" /></div><figcaption>Before &mdash; 1,000 Animators, 10.3 FPS, 96 ms/frame</figcaption></figure>
-              <figure class="media"><div class="media__frame" data-label="After &mdash; GPU skinning, 215 FPS" data-file="assets/work/npc-after.png"><img src="assets/work/npc-after.png" alt="Same 1000 NPCs on GPU skinning running at 215 FPS" loading="lazy" /></div><figcaption>After &mdash; same crowd on the GPU, 215 FPS, 4.7 ms/frame</figcaption></figure>
-            </div>
-          </article>
-
-          <!-- CASE: DRESSING SYSTEM -->
-          <article class="case" id="dressing-system">
-            <div class="case__body">
-              <span class="case__tag">SOLAR &middot; Game Systems</span>
-              <h2 class="case__title">A character dressing system that had to scale past hand-wiring</h2>
-              <div class="case__block">
-                <span class="case__label">Problem</span>
-                <p>Players build an avatar from garments that come from the backend, get bought in a store, and render on both the player and the NPC crowd &mdash; and the catalogue keeps growing. Wiring that by hand as prefabs doesn't survive the second content drop, and the people adding outfits aren't programmers.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">Approach</span>
-                <p>I own this system end to end. Garments are described as data in a node graph rather than assembled by hand, and the team authors them through purpose-built tooling instead of the Inspector.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">How it works</span>
-                <p>A garment graph describes each outfit's parts, slots and colour palettes, kept in sync with the backend catalogue; Addressables keep only what's worn in memory. On top sits an <strong>Outfit Editor</strong> where a designer composes an outfit, previews it live and saves it back as data. That same data feeds the GPU-skinned NPC crowd &mdash; which is why repeated clothing batches across characters.</p>
-              </div>
-              <div class="case__tools"><span>Node-Graph Data Model</span><span>Custom Editor Tooling</span><span>Addressables</span><span>Backend Sync</span><span>ScriptableObjects</span></div>
-              <div class="case__impact">One system covering authoring, backend sync, the store, the player and the crowd &mdash; <strong>designers build outfits without touching code</strong>.</div>
-            </div>
-            <div class="case__media">
-              <figure class="media"><div class="media__frame media__frame--video" data-label="Dressing system in game" data-file="assets/work/dressing-ingame.mp4"><video src="assets/work/dressing-ingame.mp4" poster="assets/work/dressing-ingame.png" controls preload="metadata"></video></div><figcaption>The same data, rendered in game &mdash; browsing, previewing and buying garments</figcaption></figure>
-            </div>
-          </article>
-
-          <!-- CASE: CAMERA CONTEXT SYSTEM (no media) -->
-          <article class="case case--nomedia" id="camera-context">
-            <div class="case__body">
-              <span class="case__tag">SOLAR &middot; Architecture</span>
-              <h2 class="case__title">When everything wants to control the camera</h2>
-              <div class="case__block">
-                <span class="case__label">Problem</span>
-                <p>Open world, cutscenes, battles, dressing screens, geolocation &mdash; every feature eventually wants to move the camera. Once several systems can each grab it, you get the bug where the camera ends up somewhere nobody intended and no single piece of code is wrong on its own.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">Approach</span>
-                <p>I made camera state single-authority: features declare the context they want, and one arbiter decides &mdash; once per frame, in one place.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">How it works</span>
-                <p>Gameplay code never touches a camera; it requests a context. Arbitration happens at a single point in the frame, so resolution order is explicit and debuggable instead of emergent. The deliberate part: the system lives in an assembly that <strong>intentionally can't reference Cinemachine</strong> &mdash; so reaching past the abstraction isn't a code-review note, it's a compile error.</p>
-              </div>
-              <div class="case__tools"><span>Assembly Definitions</span><span>State Arbitration</span><span>Cinemachine</span><span>Layered Architecture</span></div>
-              <div class="case__impact">Architecture enforced by the compiler, not by convention.</div>
-            </div>
-          </article>
-
-          <!-- CASE: INTERNAL TOOLING -->
-          <article class="case case--nomedia" id="kykuyo-tooling">
-            <div class="case__body">
-              <span class="case__tag">SOLAR &middot; Automation</span>
-              <h2 class="case__title">Internal tooling for the work nobody should do by hand</h2>
-              <div class="case__block">
-                <span class="case__label">Problem</span>
-                <p>A live game accumulates chores: keeping Addressable groups in sync with the folders, regenerating the API client on every backend change, cutting builds with the right keystore and version. Done by hand, each one is a chance to break a build without noticing.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">Approach</span>
-                <p>I built the tools where the chores were &mdash; as named editor utilities the whole team uses, not scripts living on my machine.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">How it works</span>
-                <p>An <strong>Addressables Folder Manager</strong> drives group membership from the folder layout instead of manual assignment. A <strong>build-and-API suite</strong> regenerates the typed client with backup and rollback, cleans QA state, and handles keystore validation and version injection. A <strong>Mesh Instance Baker</strong> speeds up scene authoring. Plus smaller quality-of-life tools that remove daily friction.</p>
-              </div>
-              <div class="case__tools"><span>Custom Editor Tooling</span><span>Addressables</span><span>Code Generation</span><span>Build Automation</span></div>
-              <div class="case__impact">Repetitive, error-prone setup turned into <strong>one-click, validated editor actions</strong> for the whole team.</div>
-            </div>
-          </article>
-
-          <!-- CASE: WAXY EDITOR TOOLING (no media) -->
-          <article class="case case--nomedia" id="waxy-editor">
-            <div class="case__body">
-              <span class="case__tag">Waxy &middot; Editor Tooling</span>
-              <h2 class="case__title">Editor tooling that took the busywork out of level building</h2>
-              <div class="case__block">
-                <span class="case__label">Problem</span>
-                <p>Building levels carried a lot of manual busywork: entering Play Mode just to check if a jump was reachable, converting grey blockouts into final prefabs one by one, and typing localization keys clip by clip. None of it was design &mdash; it was overhead on top of it.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">Approach</span>
-                <p>Rather than one big editor, I built a small tool for each bottleneck, plus a data-driven tuning pipeline so gameplay values could change without recompiling.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">How it works</span>
-                <p><strong>Replace ProBuilder For Prefab</strong> swaps blockout geometry for final prefabs in batch. A <strong>Subtitle Localization Helper</strong> walks every Timeline and assigns localization keys automatically. And a <strong>stats pipeline</strong> serializes ScriptableObject values to JSON before each build and re-injects them at runtime &mdash; fixing Unity's habit of freezing Play Mode tweaks at build time.</p>
-              </div>
-              <div class="case__tools"><span>Custom Editor Windows</span><span>ScriptableObjects</span><span>Build Preprocessing</span><span>Unity Localization</span></div>
-              <div class="case__impact">Manual, repeatable steps replaced by tools designers run themselves.</div>
-            </div>
-          </article>
-
-          <!-- CASE: EXTERNAL TOOLING -->
-          <article class="case" id="external-tooling">
-            <div class="case__body">
-              <span class="case__tag">Beyond Unity &middot; External Tooling</span>
-              <h2 class="case__title">Building the tool where the problem actually is</h2>
-              <div class="case__block">
-                <span class="case__label">Problem</span>
-                <p>Not every bottleneck lives inside the engine. Filing a bug meant leaving the conversation where it came up, opening a tracker and re-typing the context &mdash; so small issues quietly went unreported.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">Approach</span>
-                <p>If the friction is in Slack, the tool belongs in Slack. I prototyped a bot that turns a message into a tracked ticket without anyone leaving the channel, using a spreadsheet as a lightweight backend.</p>
-              </div>
-              <div class="case__block">
-                <span class="case__label">How it works</span>
-                <p>A slash command opens a modal &mdash; assignee, description, severity &mdash; and the bot posts the ticket into a dedicated channel with a follow-up thread and a reassign flow that records who moved it and why. A <strong>working prototype</strong>, built to prove the workflow.</p>
-              </div>
-              <div class="case__tools"><span>Slack API</span><span>Google Sheets API</span><span>Modals &amp; Slash Commands</span></div>
-              <div class="case__impact"><strong>Tooling outside the engine</strong> &mdash; I go where the repetitive work is, not where my usual stack is.</div>
-            </div>
-            <div class="case__media">
-              <figure class="media"><div class="media__frame" data-label="Slack ticket bot" data-file="assets/work/external-tooling.png"><img src="assets/work/external-tooling.png" alt="Slack bot creating and reassigning a ticket" loading="lazy" /></div><figcaption>Filing and reassigning a ticket from Slack</figcaption></figure>
-            </div>
-          </article>
-
+      <article class="case win" id="waxy-tools">
+        <div class="tb">01-level-building-tools.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">Waxy: The Wick and the Witch · Tooling</span><h2>The repetitive work that was eating level production</h2><span class="metric">10 of the project's 14 editor tools</span></header>
+          <figure class="case__media"><img src="assets/projects/waxy-1.png" alt="Waxy: The Wick and the Witch in game" loading="lazy"><figcaption>Waxy: The Wick and the Witch, in game.</figcaption></figure>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>Building levels meant converting grey ProBuilder blockouts into prefabs one by one, chasing duplicated materials, and typing localization keys clip by clip into Timelines. Overhead on top of design work.</dd></div>
+            <div><dt>Approach</dt><dd>Attack each bottleneck where it lived, rather than one big editor: 10 tools, each aimed at a specific piece of manual work, plus a data-driven tuning layer on ScriptableObjects.</dd></div>
+          </dl>
+          <div class="case__full case__how"><h3>How it works</h3><p><b>Replace ProBuilder For Prefab</b> converts blockouts into final prefabs in batch. The <b>Subtitle Localization Helper</b> walks every Timeline and writes the localization key back into each subtitle clip.</p></div>
+          <ul class="chips case__full"><li>Custom Editor Windows</li><li>ScriptableObjects</li><li>Unity Localization</li></ul>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <section class="cta">
-      <div class="wrap">
-        <h2 class="cta__title">Want the same rigor on your project?</h2>
-        <p class="cta__lead">System architecture, custom tooling, and performance — with the code to back it up.</p>
-        <a href="contact.html" class="btn btn--primary">Get in touch</a>
-      </div>
-    </section>
+      <article class="case win" id="npc-gpu">
+        <div class="tb">02-npc-crowd-gpu.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">SOLAR · Performance</span><h2>Filling a mobile city with NPCs without killing the frame</h2><span class="metric">10 → 200 fps, measured on device</span></header>
+          <figure class="case__media"><img src="assets/work/npc-before.png" alt="NPC crowd with Animators" loading="lazy"><img src="assets/work/npc-after.png" alt="Same crowd rendered on the GPU" loading="lazy"><figcaption>Same scene: Animators (top) vs. GPU skinning (bottom).</figcaption></figure>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>A geolocation game set in a living city needs crowds of NPCs, each wearing clothing from the same dressing system as the player. One animator and one draw call per character: on a mid-range Android phone, that budget disappears fast.</dd></div>
+            <div><dt>Approach</dt><dd>Move NPC animation and rendering onto the GPU, and group draws by what the GPU cares about, the mesh being drawn, rather than by which character owns it.</dd></div>
+            <div><dt>How it works</dt><dd>Animation clips are baked into texture data at edit time, so skinning happens in the shader. The same garment on different NPCs still batches together. The per-frame update runs off the main thread as a Burst-compiled job.</dd></div>
+          </dl>
+          <ul class="chips case__full"><li>GPU skinning</li><li>Custom animation baker</li><li>Jobs System</li><li>Burst Compiler</li><li>HLSL</li></ul>
+        </div>
+      </article>
+
+      <article class="case win" id="kykuyo-tooling">
+        <div class="tb">03-internal-tooling.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">SOLAR · Automation</span><h2>Internal tooling for the work nobody should do by hand</h2><span class="metric">9 of the project's 35 editor tools</span></header>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>A live mobile game accumulates chores: Addressable groups in sync with folders, regenerating the API client when the backend changes, clearing QA state, cutting builds with the right keystore and version. Each one done by hand is a chance to break a build.</dd></div>
+            <div><dt>Approach</dt><dd>Build the tools where the chores were, as named editor utilities the whole team could use, not scripts living on my machine.</dd></div>
+          </dl>
+          <dl class="case__steps">
+            <div><dt>How it works</dt><dd>An <b>Addressables Folder Manager</b> drives group membership from the folder layout. A <b>build-and-API suite</b> regenerates the typed client safely, cleans QA state, and handles keystore validation and version injection. A <b>Mesh Instance Baker</b> speeds up scene authoring.</dd></div>
+          </dl>
+          <ul class="chips case__full"><li>Custom Editor Tooling</li><li>Addressables</li><li>Code generation</li><li>Build automation</li></ul>
+        </div>
+      </article>
+
+      <article class="case win" id="dressing">
+        <div class="tb">04-dressing-system.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">SOLAR · Game systems</span><h2>A dressing system that survives every content drop</h2><span class="metric">Owned end-to-end · 8 authoring tools</span></header>
+          <figure class="case__media"><video src="assets/work/dressing-ingame.mp4" poster="assets/work/dressing-ingame.png" autoplay muted loop playsinline></video><figcaption>The dressing system in the published app.</figcaption></figure>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>Players build an avatar out of garments that come from the backend, get bought in a store, render on the player and the NPC crowd, and keep growing with every content drop. The people adding outfits aren't programmers.</dd></div>
+            <div><dt>Approach</dt><dd>Describe garments as data in a node graph instead of assembling them by hand, and give the team purpose-built authoring tools instead of the Inspector.</dd></div>
+            <div><dt>How it works</dt><dd>A garment graph describes each outfit's parts, slots and palettes, synced with the backend catalogue. Assets load through Addressables, so only what's worn stays in memory. The same data feeds the GPU-skinned crowd.</dd></div>
+          </dl>
+          <ul class="chips case__full"><li>Node-graph data model</li><li>Custom editor tooling</li><li>Addressables</li><li>Backend sync</li><li>ScriptableObjects</li></ul>
+        </div>
+      </article>
+
+      <article class="case win" id="camera">
+        <div class="tb">05-camera-contexts.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">SOLAR · Architecture</span><h2>When everything wants to control the camera</h2><span class="metric">Enforced by the compiler</span></header>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>Open world, cutscenes, battles, dressing screens, geolocation views: every feature eventually wants the camera. Once several can grab it, it ends up somewhere nobody intended, and no single piece of code is wrong on its own.</dd></div>
+            <div><dt>Approach</dt><dd>Make camera state single-authority: features declare the context they want, and one arbiter decides, once per frame, in one place.</dd></div>
+          </dl>
+          <dl class="case__steps">
+            <div><dt>How it works</dt><dd>Gameplay code never touches a camera; it requests a context. The system lives in an assembly that deliberately doesn't reference Cinemachine, so reaching through the abstraction isn't a code-review conversation: it's a compile error.</dd></div>
+          </dl>
+          <ul class="chips case__full"><li>Assembly Definitions</li><li>State arbitration</li><li>Cinemachine</li><li>Layered architecture</li></ul>
+        </div>
+      </article>
+
+      <article class="case win" id="external">
+        <div class="tb">06-external-tooling.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">Personal prototype · External tooling</span><h2>Building the tool where the problem actually is</h2><span class="metric">Working prototype</span></header>
+          <figure class="case__media"><img src="assets/work/external-tooling.png" alt="Slack bug-ticket bot" loading="lazy"><figcaption>Slack ticket bot, backed by Google Sheets.</figcaption></figure>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>Filing a bug meant leaving the conversation, opening a tracker and re-typing the context, so small issues quietly went unreported.</dd></div>
+            <div><dt>Approach</dt><dd>If the friction is in Slack, the tool belongs in Slack: a bot that turns a message into a tracked ticket, with a spreadsheet as a lightweight backend.</dd></div>
+            <div><dt>How it works</dt><dd>A slash command opens a modal (assignee, description, severity), the bot posts the ticket to a channel with a thread for follow-up, and a reassign flow records who moved it and why.</dd></div>
+          </dl>
+          <ul class="chips case__full"><li>Slack API</li><li>Google Sheets API</li><li>Modals &amp; slash commands</li><li>JSON tooling</li></ul>
+        </div>
+      </article>
+
+
+      <article class="case win" id="snackdown">
+        <div class="tb">07-snackdown-netcode.md</div>
+        <div class="win__body case__grid">
+          <header class="case__head"><span class="eyebrow">Snackdown · Multiplayer · Open source</span><h2>Making a multiplayer platformer the server can trust</h2><span class="metric">0.302 u median prediction error at 20% packet loss</span></header>
+          <figure class="case__media case__media--stats"><div class="statgrid"><div><b>30 Hz</b><span>fixed network tick, separate from framerate</span></div><div><b>0.302 u</b><span>median prediction error at 20% packet loss, a third of the character's width</span></div><div><b>2</b><span>corrections in 79 s on a home network (2% loss, 367 ms RTT)</span></div><div><b>4</b><span>players, host over Unity Relay</span></div></div><figcaption>Measured with the Netcode for GameObjects network simulator, with a reproducible procedure and CSV export.</figcaption></figure>
+          <dl class="case__steps">
+            <div><dt>Problem</dt><dd>My final project for a university networking course worked, but clients wrote their own positions, sent RPCs every frame and joined without any approval. Any client could move anywhere, at any speed.</dd></div>
+            <div><dt>Approach</dt><dd>Rebuild it from scratch as server-authoritative, with the client-side prediction and server reconciliation that Netcode for GameObjects doesn't ship, written by hand on its tick system.</dd></div>
+            <div><dt>How it works</dt><dd>A kinematic controller with one pure step function runs on both client and server, so the client predicts and the server confirms. Input goes out unreliable with the last 3 commands for redundancy; the server sends one snapshot per tick for every player, and remote players are interpolated about 100 ms behind.</dd></div>
+          </dl>
+          <div class="case__full case__how"><h3>Also</h3><p><b>Connection approval</b> with a payload (nickname, character, version check), and the same join flow by <b>Relay code or LAN IP</b> behind one interface. <b>EditMode tests</b> cover the simulation, including replay determinism: 40 simulated ticks run twice give a bit-identical result. Built with Claude Code.</p></div>
+          <ul class="chips case__full"><li>Netcode for GameObjects</li><li>Unity Transport</li><li>Relay / Lobby</li><li>Client-side prediction</li><li>Server reconciliation</li><li>Snapshot interpolation</li><li>EditMode tests</li></ul>
+          <a class="link case__full" href="https://github.com/LucaValentini25/Snackdown">See the repo on GitHub ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
   </main>
 
-  <footer class="footer wrap">
-    <span>© <span id="year"></span> Luca Valentini</span>
-    <span>Built from a single source of truth · Buenos Aires</span>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>&copy; <span id="year">2026</span> Luca Valentini</span>
+      <nav class="footer__links" aria-label="Legal and data">
+        <a href="privacy.html" hreflang="es">Privacy</a>
+        <a href="llms.txt">llms.txt</a>
+        <a href="profile.json">profile.json</a>
+        <a href="https://github.com/LucaValentini25">GitHub</a>
+        <a href="https://www.linkedin.com/in/lucavalentinidev">LinkedIn</a>
+      </nav>
+    </div>
   </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>
