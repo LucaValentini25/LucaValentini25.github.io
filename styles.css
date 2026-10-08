@@ -215,9 +215,9 @@ main { padding-bottom: 32px; }
 
 /* ------------------------------------------------- case studies */
 .cases .wrap { display: grid; gap: 24px; }
-.toc { display: flex; flex-wrap: wrap; margin-top: 18px; border-bottom: 1px solid var(--line); font: 500 13px var(--f-ui); }
-.toc a { padding: 8px 12px; color: var(--sage); transition: color .15s, box-shadow .15s; }
-.toc a:hover { color: var(--blue-ink); box-shadow: inset 0 -2px var(--blue); }
+.toc { display: flex; flex-wrap: wrap; margin-top: 22px; border-bottom: 1px solid var(--line); background: var(--linen); border-radius: 4px 4px 0 0; font: 500 13px var(--f-ui); }
+.toc a { padding: 9px 14px; color: var(--sage); transition: color .15s, background .15s, box-shadow .15s; }
+.toc a:hover { color: var(--blue-ink); background: var(--paper); box-shadow: inset 0 -2px var(--blue); }
 .case { scroll-margin-top: 16px; }
 .case__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 44px; align-items: start; }
 .case__grid > * { min-width: 0; }
@@ -299,16 +299,20 @@ a.zoom { display: block; cursor: zoom-in; }
 .contact__grid > * { min-width: 0; }
 .contact__mailrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 18px; }
 .contact__mail { color: var(--blue-ink); font-size: clamp(1.1rem, 2.4vw, 1.5rem); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; overflow-wrap: anywhere; }
-.copy { font: 500 13px var(--f-ui); border: 1px solid var(--line); background: var(--linen); color: var(--moss); border-radius: 4px; padding: 5px 10px; cursor: pointer; transition: background .15s, transform .14s var(--ease); }
-.copy:hover { background: var(--stone); }
-.copy:active { transform: scale(.97); }
+.copy { display: inline-grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 4px; background: transparent; color: var(--sage); cursor: pointer; transition: background .15s, color .15s, transform .14s var(--ease); }
+.copy:hover { background: var(--linen); color: var(--moss); }
+.copy:active { transform: scale(.92); }
+.copy svg { grid-area: 1 / 1; width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: opacity .15s, transform .2s var(--ease); }
+.copy .i-check { opacity: 0; transform: scale(.6); color: #3d7a28; }
+.copy.is-done .i-copy { opacity: 0; transform: scale(.6); }
+.copy.is-done .i-check { opacity: 1; transform: none; }
+.contact__mailrow { gap: 4px 6px; }
 .contact__list { border: 1px solid var(--line); border-radius: 4px; }
 .contact__list a { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px 14px; border-bottom: 1px solid var(--line2); font-size: 15px; transition: background .15s; }
 .contact__list a:last-child { border-bottom: 0; }
 .contact__list a:hover { background: var(--linen); }
 .contact__list span:first-child { font: 600 13px var(--f-ui); }
 .contact__list span:last-child { color: var(--blue-ink); }
-.cta .win { max-width: 720px; }
 .cta h2 { font-size: 24px; font-weight: 800; letter-spacing: -.025em; }
 .cta p { color: var(--olive); margin: 6px 0 18px; }
 
@@ -344,7 +348,8 @@ a.zoom { display: block; cursor: zoom-in; }
 /* --------------------------------------------------------- footer */
 .footer { padding: 16px 0 72px; font: 500 13px var(--f-ui); color: var(--sage); }
 .footer__inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-.footer__id { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; }
+.footer__legal { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
+.footer__copy { color: var(--sage); }
 .footer__social { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .footer__social a { display: inline-flex; align-items: center; gap: 6px; color: var(--olive); padding: 4px 0; }
 .footer__social a:hover { color: var(--blue-ink); }

@@ -107,15 +107,16 @@ if (filters) {
 document.querySelectorAll('button.copy[data-copy]').forEach((b) => {
   if (!navigator.clipboard) return; // sin API de portapapeles, el botón queda oculto
   b.hidden = false;
-  const label = b.textContent;
+  const status = document.getElementById('copy-status');
   b.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(b.dataset.copy);
-      b.textContent = 'Copied ✓';
+      b.classList.add('is-done');
+      if (status) status.textContent = 'Email address copied';
     } catch (_) {
-      b.textContent = 'Select and copy it';
+      if (status) status.textContent = 'Could not copy. Select the address and copy it.';
     }
-    setTimeout(() => { b.textContent = label; }, 1600);
+    setTimeout(() => { b.classList.remove('is-done'); if (status) status.textContent = ''; }, 1600);
   });
 });
 
