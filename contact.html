@@ -79,10 +79,9 @@
                Sin JS se envía igual (POST normal y Web3Forms muestra su página de confirmación).
                Con JS, main.js lo envía por fetch y muestra los estados en #form-status. -->
           <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-            <!-- COMPLETAR: access key de Web3Forms. Se pide en web3forms.com con el email donde querés recibir
-                 los mensajes (lucavalentini25@gmail.com) y llega por mail. Es pública por diseño: solo sirve para
-                 enviarte mensajes a vos, no para leerlos. -->
-            <input type="hidden" name="access_key" value="REEMPLAZAR-WEB3FORMS-ACCESS-KEY">
+            <!-- Access key de Web3Forms (cargada el 08/10/2026). Es pública por diseño: solo sirve para
+                 enviar mensajes a lucavalentini25@gmail.com, no para leerlos. Si se rota, cambiarla acá. -->
+            <input type="hidden" name="access_key" value="8f663d1a-6e15-44fb-ad90-7020889bf215">
             <input type="hidden" name="subject" value="New proposal from lucavalentini25.github.io">
             <input type="hidden" name="from_name" value="Portfolio contact form">
             <!-- Honeypot anti-spam: invisible para personas; si un bot lo marca, Web3Forms descarta el envío. -->
