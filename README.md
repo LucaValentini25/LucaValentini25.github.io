@@ -7,7 +7,7 @@ Portfolio personal de Luca Valentini, sitio 100% estático en GitHub Pages. Sin 
 | Archivo | Qué es |
 |---|---|
 | `index.html` · `work.html` · `projects.html` · `about.html` · `contact.html` | Páginas, en inglés |
-| `privacy.html` | Política de privacidad, en español |
+| `privacy.html` · `es/privacy.html` | Política de privacidad en inglés y en español (enlazadas con `hreflang`). Si cambia una, cambiar la otra |
 | `styles.css` · `main.js` | Estilo "escritorio" y JS opcional (año, link activo, YouTube diferido, formulario) |
 | `analytics.js` | Umami Cloud, sin cookies. Solo carga en el dominio real |
 | `data.json` | **Fuente única** de los archivos para máquinas. Se deriva de `Portfolio/Datos Portfolio Web.md` del workspace |
@@ -22,6 +22,6 @@ Portfolio personal de Luca Valentini, sitio 100% estático en GitHub Pages. Sin 
 1. Cambiar primero `Datos Portfolio Web.md` (workspace), después el HTML y `data.json`.
 2. `python tools/build.py` y commitear los archivos generados junto con el cambio.
 
-## Placeholders que hay que completar (buscar `REEMPLAZAR` y `COMPLETAR`)
+## Para revisar
 
-- `projects.html`: trailer de Rollgeon.
+Buscar `REVISAR` en `privacy.html` y `es/privacy.html`.

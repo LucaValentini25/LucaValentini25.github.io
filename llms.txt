@@ -11,7 +11,8 @@ Available now for Senior Unity Developer roles, remote, worldwide. Contractor fr
 - [Projects](https://lucavalentini25.github.io/projects.html)
 - [About](https://lucavalentini25.github.io/about.html)
 - [Contact](https://lucavalentini25.github.io/contact.html)
-- [Privacy policy (Spanish)](https://lucavalentini25.github.io/privacy.html)
+- [Privacy policy](https://lucavalentini25.github.io/privacy.html)
+- [Política de privacidad (español)](https://lucavalentini25.github.io/es/privacy.html)
 
 ## Projects
 

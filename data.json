@@ -10,7 +10,8 @@
       { "path": "/projects.html", "title": "Projects" },
       { "path": "/about.html", "title": "About" },
       { "path": "/contact.html", "title": "Contact" },
-      { "path": "/privacy.html", "title": "Privacy policy (Spanish)" }
+      { "path": "/privacy.html", "title": "Privacy policy" },
+      { "path": "/es/privacy.html", "title": "Política de privacidad (español)" }
     ]
   },
   "basics": {
@@ -150,7 +151,8 @@
       "result": "Porting the game to mobile and adding controller support.",
       "platforms": ["Web", "Mobile (in progress)"],
       "keywords": ["Unity", "Mobile port", "Input System", "Gamepad"],
-      "url": "https://3amgamesstudio.itch.io/rollgeon"
+      "url": "https://3amgamesstudio.itch.io/rollgeon",
+      "video": "https://www.youtube.com/watch?v=tV2u1QosCds"
     },
     {
       "id": "spca",
