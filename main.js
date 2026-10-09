@@ -17,6 +17,11 @@ document.querySelectorAll('.nav__links a, .files a').forEach((a) => {
   }
 });
 
+// ---- Videos en loop: con "reducir movimiento" no arrancan solos y muestran controles
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('video[autoplay]').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });
+}
+
 // ---- YouTube con carga diferida (facade)
 // Antes del click solo hay una miniatura alojada en el sitio: no se contacta a
 // YouTube ni a Google. Al hacer click se crea el iframe de youtube-nocookie.com.

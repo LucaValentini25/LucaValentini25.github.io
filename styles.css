@@ -177,6 +177,9 @@ main { padding-bottom: 32px; }
 .card__media--stat b { font: 800 1.9rem/1 var(--f-content); letter-spacing: -.02em; color: var(--moss); }
 .card__media--yt, .card__media--video { aspect-ratio: auto; background: #000; display: flex; align-items: center; }
 .card__media--video video { height: auto; }
+/* captura de Discord: fondo del propio Discord, recorte desde arriba */
+.card__media--bot { background: #1a1a1e; }
+.card__media--bot img { object-fit: cover; object-position: left top; }
 .card__body { display: flex; flex-direction: column; gap: 6px; flex: 1; padding: 16px 18px 18px; }
 .card h3 { font-size: 19px; font-weight: 700; letter-spacing: -.02em; line-height: 1.25; }
 .card p { font-size: 15px; color: var(--olive); }
