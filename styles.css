@@ -132,6 +132,9 @@ main { padding-bottom: 32px; }
 .btn--primary:hover { background: var(--amber-d); }
 .btn--secondary { background: transparent; color: var(--gold-ink); box-shadow: inset 0 0 0 1.5px var(--gold); }
 .btn--secondary:hover { background: var(--linen); }
+/* botón neutro del sistema (Soft Linen): acción secundaria sin competir con el ámbar */
+.btn--ghost { background: var(--linen); color: var(--moss); box-shadow: inset 0 0 0 1px var(--line); }
+.btn--ghost:hover { background: var(--stone); }
 .btn[disabled] { opacity: .6; cursor: progress; }
 
 /* --------------------------------------------------------- chips */
