@@ -5,12 +5,12 @@
 // sistema operativo y dispositivo. No identifica personas.
 //
 // Website ID de Umami (cargado el 08/10/2026). Si se recrea el sitio en Umami,
-// reemplazarlo acá (Settings → Websites → lucavalentini25.github.io).
+// reemplazarlo acá (Settings → Websites → lucavalentini.dev).
 // Solo se carga en el dominio real: localhost y previews no cuentan.
 // ============================================================
 (function () {
   const WEBSITE_ID = '00365882-d921-4aa7-abd2-eebc42bb58cc';
-  const DOMAIN = 'lucavalentini25.github.io'; // no cuenta visitas en localhost ni en previews
+  const DOMAIN = 'lucavalentini.dev'; // dominio propio desde el 26/10/2026; github.io redirige acá
 
   if (WEBSITE_ID.startsWith('REEMPLAZAR') || location.hostname !== DOMAIN) return;
 
