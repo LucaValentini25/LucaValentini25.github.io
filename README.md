@@ -1,4 +1,4 @@
-# lucavalentini25.github.io
+# lucavalentini.dev
 
 Portfolio personal de Luca Valentini, sitio 100% estático en GitHub Pages. Sin build obligatorio, sin dependencias, sin cookies.
 

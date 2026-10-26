@@ -6,13 +6,13 @@ Available now for Senior Unity Developer roles, remote, worldwide. Contractor fr
 
 ## Pages
 
-- [Home](https://lucavalentini25.github.io/)
-- [Case studies](https://lucavalentini25.github.io/work.html)
-- [Projects](https://lucavalentini25.github.io/projects.html)
-- [About](https://lucavalentini25.github.io/about.html)
-- [Contact](https://lucavalentini25.github.io/contact.html)
-- [Privacy policy](https://lucavalentini25.github.io/privacy.html)
-- [Política de privacidad (español)](https://lucavalentini25.github.io/es/privacy.html)
+- [Home](https://lucavalentini.dev/)
+- [Case studies](https://lucavalentini.dev/work.html)
+- [Projects](https://lucavalentini.dev/projects.html)
+- [About](https://lucavalentini.dev/about.html)
+- [Contact](https://lucavalentini.dev/contact.html)
+- [Privacy policy](https://lucavalentini.dev/privacy.html)
+- [Política de privacidad (español)](https://lucavalentini.dev/es/privacy.html)
 
 ## Projects
 
@@ -20,17 +20,17 @@ Available now for Senior Unity Developer roles, remote, worldwide. Contractor fr
 - [Snackdown](https://github.com/LucaValentini25/Snackdown): 2D last-player-standing multiplayer platformer, server-authoritative, with hand-written client-side prediction, server reconciliation and snapshot interpolation. Built with Claude Code.
 - [Rollgeon](https://3amgamesstudio.itch.io/rollgeon): Roguelike dice builder where your deck is a bag of dice and combat is based on Generala. In development.
 - [Waxy: The Wick and the Witch](https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch): 3D puzzle-platformer by 3AM Games Studio, selected for the ADVA MPVP mentorship program after a rework of its core mechanic.
-- [SPCA x SOLAR](https://lucavalentini25.github.io/projects.html#spca): Time-limited cat-rescue campaign game with SPCA, an animal rescue in Singapore. The campaign has ended.
+- [SPCA x SOLAR](https://lucavalentini.dev/projects.html#spca): Time-limited cat-rescue campaign game with SPCA, an animal rescue in Singapore. The campaign has ended.
 - [Unity Tools](https://github.com/LucaValentini25/Unity-Tools): Five Unity editor tools published as UPM packages: Asset Renamer, PlayerPrefs Manager, Prefab Replacer, Project Zipper and Rename Items.
 - [You Can't Always Push the Red Button](https://zathmell.itch.io/you-cant-always-push-the-red-button): Decision-making game for the Unity BA Game Jam 2026: you rule a cat nation and try not to just push the button. Made with Claude Code in 3 days.
 - [Indie Community Bot](https://github.com/LucaValentini25/indie-community-bot): Reusable Discord bot for indie game communities: welcome cards, devlogs, build notifications from CI and bug reports as private threads. All settings live per server in the database.
-- [Brain App](https://lucavalentini25.github.io/projects.html#brain): Local-first AI assistant where the LLM never decides an action: it classifies intent, and deterministic code does the work. Private repository.
+- [Brain App](https://lucavalentini.dev/projects.html#brain): Local-first AI assistant where the LLM never decides an action: it classifies intent, and deterministic code does the work. Private repository.
 
 ## Machine-readable data
 
-- [llms-full.txt](https://lucavalentini25.github.io/llms-full.txt): full profile in Markdown (experience, education, skills, projects, contact)
-- [profile.json](https://lucavalentini25.github.io/profile.json): the same data as JSON Resume
+- [llms-full.txt](https://lucavalentini.dev/llms-full.txt): full profile in Markdown (experience, education, skills, projects, contact)
+- [profile.json](https://lucavalentini.dev/profile.json): the same data as JSON Resume
 
 ## Optional
 
-- [Case studies](https://lucavalentini25.github.io/work.html): how specific problems were solved, with measured results
+- [Case studies](https://lucavalentini.dev/work.html): how specific problems were solved, with measured results

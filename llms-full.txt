@@ -7,7 +7,7 @@ Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023
 - **Availability:** Available now for Senior Unity Developer roles, remote, worldwide. Contractor from Argentina is fine.
 - **Location:** Buenos Aires, Argentina (remote)
 - **Email:** lucavalentini25@gmail.com
-- **Website:** https://lucavalentini25.github.io
+- **Website:** https://lucavalentini.dev
 - **LinkedIn:** https://www.linkedin.com/in/lucavalentinidev
 - **GitHub:** https://github.com/LucaValentini25
 - **Instagram:** https://www.instagram.com/clastergamedev/
@@ -145,15 +145,15 @@ Local-first AI assistant where the LLM never decides an action: it classifies in
 
 ## Case studies
 
-- [A dressing system that survives every content drop](https://lucavalentini25.github.io/work.html#dressing) (SOLAR): Garments as data in a node graph, an in-game coin shop backed by the API, 8 purpose-built authoring tools, and the same data feeding the player and the NPC crowd.
-- [Filling a mobile city with NPCs without killing the frame](https://lucavalentini25.github.io/work.html#npc-gpu) (SOLAR): GPU skinning with a custom Vertex Texture Animation (VAT) baker and draws grouped by mesh, replacing one Animator per character and a draw call per garment piece: 10 to 200 fps measured on device.
-- [Making a multiplayer platformer the server can trust](https://lucavalentini25.github.io/work.html#snackdown) (Snackdown): Server-authoritative rebuild with client-side prediction and server reconciliation written by hand, on a 30 Hz tick.
-- [Taking a browser roguelike to phones and controllers](https://lucavalentini25.github.io/work.html#rollgeon-port) (Rollgeon): Mobile port and controller support for a roguelike dice builder: touch controls, safe-area layouts and inputs reworked into gestures or on-screen buttons.
-- [Internal tooling for the work nobody should do by hand](https://lucavalentini25.github.io/work.html#kykuyo-tooling) (SOLAR): Named editor utilities the whole team uses: Addressables Folder Manager, a build-and-API suite and a Mesh Instance Baker. 9 of the project's 35 editor tools.
-- [When everything wants to control the camera](https://lucavalentini25.github.io/work.html#camera) (SOLAR): Single-authority camera state arbitrated once per frame, in an assembly that deliberately doesn't reference Cinemachine, so bypassing it is a compile error.
-- [The repetitive work that was eating level production](https://lucavalentini25.github.io/work.html#waxy-tools) (Waxy): 10 of the project's 14 custom editor tools, including batch blockout-to-prefab conversion and localization key assignment across Timelines.
-- [Building the tool where the problem actually is](https://lucavalentini25.github.io/work.html#external) (Personal prototype): A Slack bot that turns a message into a tracked ticket, backed by Google Sheets. A working prototype.
+- [A dressing system that survives every content drop](https://lucavalentini.dev/work.html#dressing) (SOLAR): Garments as data in a node graph, an in-game coin shop backed by the API, 8 purpose-built authoring tools, and the same data feeding the player and the NPC crowd.
+- [Filling a mobile city with NPCs without killing the frame](https://lucavalentini.dev/work.html#npc-gpu) (SOLAR): GPU skinning with a custom Vertex Texture Animation (VAT) baker and draws grouped by mesh, replacing one Animator per character and a draw call per garment piece: 10 to 200 fps measured on device.
+- [Making a multiplayer platformer the server can trust](https://lucavalentini.dev/work.html#snackdown) (Snackdown): Server-authoritative rebuild with client-side prediction and server reconciliation written by hand, on a 30 Hz tick.
+- [Taking a browser roguelike to phones and controllers](https://lucavalentini.dev/work.html#rollgeon-port) (Rollgeon): Mobile port and controller support for a roguelike dice builder: touch controls, safe-area layouts and inputs reworked into gestures or on-screen buttons.
+- [Internal tooling for the work nobody should do by hand](https://lucavalentini.dev/work.html#kykuyo-tooling) (SOLAR): Named editor utilities the whole team uses: Addressables Folder Manager, a build-and-API suite and a Mesh Instance Baker. 9 of the project's 35 editor tools.
+- [When everything wants to control the camera](https://lucavalentini.dev/work.html#camera) (SOLAR): Single-authority camera state arbitrated once per frame, in an assembly that deliberately doesn't reference Cinemachine, so bypassing it is a compile error.
+- [The repetitive work that was eating level production](https://lucavalentini.dev/work.html#waxy-tools) (Waxy): 10 of the project's 14 custom editor tools, including batch blockout-to-prefab conversion and localization key assignment across Timelines.
+- [Building the tool where the problem actually is](https://lucavalentini.dev/work.html#external) (Personal prototype): A Slack bot that turns a message into a tracked ticket, backed by Google Sheets. A working prototype.
 
 ## Contact
 
-Email lucavalentini25@gmail.com or use the form at https://lucavalentini25.github.io/contact.html.
+Email lucavalentini25@gmail.com or use the form at https://lucavalentini.dev/contact.html.

@@ -1,7 +1,7 @@
 {
   "_comment": "Fuente única de los archivos para máquinas (llms.txt, llms-full.txt, profile.json, sitemap.xml, JSON-LD de la home). Se deriva de Portfolio/Datos Portfolio Web.md: si cambia algo allá, se actualiza acá y se corre `python tools/build.py`. Confidencialidad KYKUYO: todo lo de SOLAR va a alto nivel. Nunca el teléfono.",
   "site": {
-    "url": "https://lucavalentini25.github.io",
+    "url": "https://lucavalentini.dev",
     "language": "en",
     "lastUpdated": "2026-10-08",
     "pages": [
@@ -38,9 +38,9 @@
   "basics": {
     "name": "Luca Valentini",
     "label": "Senior Unity Developer and Software Developer, systems & tools",
-    "image": "https://lucavalentini25.github.io/assets/me.jpg",
+    "image": "https://lucavalentini.dev/assets/me.jpg",
     "email": "lucavalentini25@gmail.com",
-    "url": "https://lucavalentini25.github.io",
+    "url": "https://lucavalentini.dev",
     "summary": "Senior Unity Developer with 6+ years in Unity and C#, in studio teams since 2023. I build the parts of a game other people build on: systems that hold up as content grows, and editor tools that turn hours of manual work into one click, with performance measured on the phones players own.",
     "availability": "Available now for Senior Unity Developer roles, remote, worldwide. Contractor from Argentina is fine.",
     "location": {
